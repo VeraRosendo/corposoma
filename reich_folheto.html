@@ -577,9 +577,38 @@
     .footer { grid-template-columns: 1fr; }
     .hero-ornament { display: none; }
   }
+
+  /* ── BOTÃO VOLTAR ── */
+  #btn-voltar {
+    position: fixed;
+    top: 18px;
+    left: 20px;
+    z-index: 9999;
+    background: rgba(26,14,8,0.78);
+    color: #d4a96a;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    padding: 8px 18px;
+    border: 1px solid rgba(212,169,106,0.35);
+    border-radius: 2px;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    transition: background 0.2s, border-color 0.2s;
+  }
+  #btn-voltar:hover {
+    background: rgba(26,14,8,0.96);
+    border-color: rgba(212,169,106,0.75);
+    color: #e8c07a;
+  }
 </style>
 </head>
 <body>
+
+<!-- Botão fixo de voltar -->
+<a href="index.html" id="btn-voltar">&#8592; Corpo Vivo</a>
+
 <div class="page">
 
   <!-- ── HERO ── -->
