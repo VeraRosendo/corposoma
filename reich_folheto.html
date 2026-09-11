@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wilhelm Reich — As Couraças e a Vida</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink: #1a0e08;
+    --cream: #f5efe3;
+    --gold: #b8872a;
+    --rust: #8b3a1e;
+    --sage: #4a6741;
+    --deep: #0d1f1a;
+    --warm: #d4a96a;
+  }
+
+  body {
+    background: var(--cream);
+    color: var(--ink);
+    font-family: 'Cormorant Garamond', serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* ── GRAIN OVERLAY ── */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 999;
+    opacity: 0.6;
+  }
+
+  .page {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 0 80px;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    position: relative;
+    background: var(--deep);
+    color: var(--cream);
+    padding: 70px 60px 60px;
+    overflow: hidden;
+    min-height: 520px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 70% 60% at 80% 40%, rgba(184,135,42,0.18) 0%, transparent 60%),
+      radial-gradient(ellipse 50% 80% at 10% 80%, rgba(139,58,30,0.25) 0%, transparent 50%);
+  }
+
+  .hero-ornament {
+    position: absolute;
+    top: 40px;
+    right: 50px;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    border: 1px solid rgba(184,135,42,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-ornament::before {
+    content: '';
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 1px solid rgba(184,135,42,0.2);
+  }
+
+  .hero-ornament::after {
+    content: '';
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 1px dashed rgba(184,135,42,0.15);
+  }
+
+  /* SVG Silhueta humana minimalista */
+  .figure-svg {
+    position: absolute;
+    right: 95px;
+    top: 60px;
+    width: 130px;
+    opacity: 0.75;
+    animation: breathe 4s ease-in-out infinite;
+  }
+
+  @keyframes breathe {
+    0%, 100% { transform: scaleY(1); opacity: 0.75; }
+    50% { transform: scaleY(1.02); opacity: 0.9; }
+  }
+
+  .hero-label {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(42px, 7vw, 72px);
+    font-weight: 900;
+    line-height: 0.95;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 6px;
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    color: var(--warm);
+    font-weight: 400;
+  }
+
+  .hero-sub {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-weight: 300;
+    font-style: italic;
+    color: rgba(245,239,227,0.7);
+    margin-top: 16px;
+    max-width: 420px;
+    line-height: 1.5;
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-line {
+    width: 60px;
+    height: 1px;
+    background: var(--gold);
+    margin-bottom: 24px;
+    position: relative;
+    z-index: 2;
+  }
+
+  /* ── INTRO BAND ── */
+  .intro-band {
+    background: var(--rust);
+    color: var(--cream);
+    padding: 28px 60px;
+    font-size: 15px;
+    font-style: italic;
+    line-height: 1.7;
+    letter-spacing: 0.3px;
+  }
+
+  .intro-band strong {
+    font-style: normal;
+    font-weight: 700;
+    color: var(--warm);
+  }
+
+  /* ── SECTION ── */
+  .section {
+    padding: 60px 60px 0;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 32px;
+  }
+
+  .section-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 72px;
+    font-weight: 900;
+    color: var(--gold);
+    opacity: 0.25;
+    line-height: 1;
+    flex-shrink: 0;
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--rust);
+  }
+
+  .section-title em {
+    font-style: italic;
+    font-weight: 400;
+  }
+
+  /* ── ARMORING ── */
+  .armoring-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    margin-bottom: 50px;
+    border: 1px solid rgba(139,58,30,0.15);
+  }
+
+  .armor-visual {
+    background: var(--deep);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    min-height: 380px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .armor-visual::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at center, rgba(184,135,42,0.12) 0%, transparent 70%);
+    animation: pulse-bg 3s ease-in-out infinite;
+  }
+
+  @keyframes pulse-bg {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+  }
+
+  .armor-content {
+    background: var(--cream);
+    padding: 40px 36px;
+  }
+
+  .armor-content p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 16px;
+    color: #2a1a12;
+  }
+
+  .armor-content p:last-child { margin-bottom: 0; }
+
+  /* ── SEGMENTS DIAGRAM ── */
+  .segments-strip {
+    margin: 0 60px 50px;
+    border-left: 3px solid var(--gold);
+    padding-left: 30px;
+  }
+
+  .seg-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-style: italic;
+    color: var(--rust);
+    margin-bottom: 24px;
+  }
+
+  .segments-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+  }
+
+  .seg-item {
+    background: white;
+    border: 1px solid rgba(139,58,30,0.12);
+    border-radius: 2px;
+    padding: 16px 18px;
+    position: relative;
+    transition: border-color 0.2s;
+  }
+
+  .seg-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: var(--rust);
+    opacity: 0.4;
+  }
+
+  .seg-item:hover { border-color: var(--gold); }
+  .seg-item:hover::before { opacity: 1; }
+
+  .seg-name {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--rust);
+    margin-bottom: 6px;
+  }
+
+  .seg-desc {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #5a3a28;
+  }
+
+  /* ── DIVIDER ── */
+  .ornamental-divider {
+    text-align: center;
+    color: var(--gold);
+    font-size: 20px;
+    letter-spacing: 12px;
+    margin: 0 60px 50px;
+    opacity: 0.6;
+    user-select: none;
+  }
+
+  /* ── AMOEBA SECTION ── */
+  .amoeba-section {
+    margin: 0 60px 50px;
+    background: var(--deep);
+    color: var(--cream);
+    padding: 50px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .amoeba-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 60% 50% at 80% 50%, rgba(74,103,65,0.3) 0%, transparent 60%);
+  }
+
+  .amoeba-header {
+    font-family: 'Playfair Display', serif;
+    font-size: 13px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--sage);
+    margin-bottom: 16px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .amoeba-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .amoeba-title em {
+    color: var(--sage);
+    font-style: italic;
+    font-weight: 400;
+  }
+
+  .amoeba-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .amoeba-text {
+    font-size: 15px;
+    line-height: 1.85;
+    color: rgba(245,239,227,0.85);
+  }
+
+  .amoeba-text p { margin-bottom: 16px; }
+  .amoeba-text p:last-child { margin: 0; }
+
+  /* SVG Ameba animada */
+  .amoeba-viz {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .amoeba-svg {
+    width: 200px;
+    height: 200px;
+  }
+
+  /* ── QUOTE ── */
+  .quote-block {
+    margin: 0 60px 50px;
+    padding: 40px 50px;
+    border: 1px solid var(--gold);
+    position: relative;
+    background: white;
+  }
+
+  .quote-block::before {
+    content: '"';
+    position: absolute;
+    top: -30px;
+    left: 40px;
+    font-family: 'Playfair Display', serif;
+    font-size: 100px;
+    color: var(--gold);
+    line-height: 1;
+    opacity: 0.4;
+  }
+
+  .quote-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-style: italic;
+    line-height: 1.6;
+    color: var(--rust);
+    margin-bottom: 20px;
+  }
+
+  .quote-source {
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+
+  /* ── BIOGRAPHY ── */
+  .bio-strip {
+    margin: 0 60px 50px;
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 30px;
+    align-items: start;
+  }
+
+  .bio-year-col {
+    text-align: right;
+    padding-top: 4px;
+  }
+
+  .bio-portrait {
+    width: 120px;
+    height: 160px;
+    background: var(--deep);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .bio-portrait::after {
+    content: 'W.R.';
+    position: absolute;
+    bottom: 8px;
+    right: 10px;
+    font-family: 'Playfair Display', serif;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--gold);
+    opacity: 0.6;
+  }
+
+  .bio-text-col h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--rust);
+    margin-bottom: 14px;
+  }
+
+  .bio-text-col p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #2a1a12;
+    margin-bottom: 12px;
+  }
+
+  /* ── CONCEPTS BOX ── */
+  .concepts-row {
+    margin: 0 60px 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: rgba(139,58,30,0.2);
+  }
+
+  .concept-card {
+    background: var(--cream);
+    padding: 28px 24px;
+    position: relative;
+  }
+
+  .concept-card:hover {
+    background: white;
+    z-index: 2;
+  }
+
+  .concept-icon {
+    font-size: 28px;
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  .concept-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--rust);
+    margin-bottom: 10px;
+  }
+
+  .concept-desc {
+    font-size: 13.5px;
+    line-height: 1.7;
+    color: #4a2a18;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: var(--ink);
+    color: var(--cream);
+    padding: 40px 60px;
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 30px;
+    align-items: end;
+  }
+
+  .footer-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    color: var(--warm);
+    margin-bottom: 10px;
+  }
+
+  .footer-tagline {
+    font-size: 13px;
+    font-style: italic;
+    color: rgba(245,239,227,0.5);
+  }
+
+  .footer-right {
+    text-align: right;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+    opacity: 0.6;
+  }
+
+  @media (max-width: 650px) {
+    .hero { padding: 50px 28px 40px; }
+    .section, .segments-strip, .amoeba-section,
+    .quote-block, .bio-strip, .concepts-row,
+    .ornamental-divider, .intro-band { margin-left: 0; margin-right: 0; padding-left: 24px; padding-right: 24px; }
+    .armoring-grid, .amoeba-cols, .concepts-row { grid-template-columns: 1fr; }
+    .armor-visual { min-height: 220px; }
+    .bio-strip { grid-template-columns: 1fr; }
+    .footer { grid-template-columns: 1fr; }
+    .hero-ornament { display: none; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- ── HERO ── -->
+  <header class="hero">
+    <div class="hero-ornament"></div>
+
+    <!-- Silhueta humana SVG com couraças -->
+    <svg class="figure-svg" viewBox="0 0 100 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Corpo -->
+      <ellipse cx="50" cy="28" rx="16" ry="16" fill="none" stroke="#b8872a" stroke-width="1"/>
+      <!-- pescoço -->
+      <line x1="50" y1="44" x2="50" y2="55" stroke="#b8872a" stroke-width="1.5"/>
+      <!-- tronco -->
+      <rect x="32" y="55" width="36" height="68" rx="4" fill="none" stroke="#b8872a" stroke-width="1"/>
+      <!-- braços -->
+      <line x1="32" y1="62" x2="12" y2="95" stroke="#b8872a" stroke-width="1.5"/>
+      <line x1="68" y1="62" x2="88" y2="95" stroke="#b8872a" stroke-width="1.5"/>
+      <!-- pernas -->
+      <line x1="40" y1="123" x2="34" y2="185" stroke="#b8872a" stroke-width="1.5"/>
+      <line x1="60" y1="123" x2="66" y2="185" stroke="#b8872a" stroke-width="1.5"/>
+      <!-- pés -->
+      <ellipse cx="30" cy="188" rx="10" ry="4" fill="none" stroke="#b8872a" stroke-width="1"/>
+      <ellipse cx="70" cy="188" rx="10" ry="4" fill="none" stroke="#b8872a" stroke-width="1"/>
+
+      <!-- COURAÇAS — anéis de tensão -->
+      <!-- ocular -->
+      <ellipse cx="50" cy="24" rx="20" ry="5" fill="none" stroke="#8b3a1e" stroke-width="0.8" stroke-dasharray="3 2" opacity="0.8"/>
+      <!-- oral -->
+      <ellipse cx="50" cy="35" rx="20" ry="5" fill="none" stroke="#8b3a1e" stroke-width="0.8" stroke-dasharray="3 2" opacity="0.8"/>
+      <!-- cervical -->
+      <ellipse cx="50" cy="50" rx="14" ry="4" fill="none" stroke="#d4a96a" stroke-width="1" opacity="0.9"/>
+      <!-- torácica -->
+      <ellipse cx="50" cy="72" rx="24" ry="5" fill="none" stroke="#d4a96a" stroke-width="1" opacity="0.9"/>
+      <!-- diafragma -->
+      <ellipse cx="50" cy="89" rx="24" ry="5" fill="none" stroke="#8b3a1e" stroke-width="1.2" stroke-dasharray="4 2" opacity="1"/>
+      <!-- abdominal -->
+      <ellipse cx="50" cy="103" rx="24" ry="5" fill="none" stroke="#d4a96a" stroke-width="0.9" opacity="0.8"/>
+      <!-- pélvico -->
+      <ellipse cx="50" cy="119" rx="24" ry="5" fill="none" stroke="#8b3a1e" stroke-width="1" stroke-dasharray="3 2" opacity="0.9"/>
+    </svg>
+
+    <p class="hero-label">Psicologia Reichiana · Vegetoterapia · Orgone</p>
+    <h1>A <em>Couraça</em><br>do Caráter</h1>
+    <div class="hero-line"></div>
+    <p class="hero-sub">Como Wilhelm Reich descobriu que o corpo guarda — e liberta — a história da alma.</p>
+  </header>
+
+  <!-- ── INTRO BAND ── -->
+  <div class="intro-band">
+    Para Reich, <strong>corpo e psique são um único campo energético.</strong> Cada emoção bloqueada, cada medo reprimido, cada dor não sentida — tudo isso se fixa nos músculos, na respiração, na postura. A isso ele chamou de <strong>couraça</strong>.
+  </div>
+
+  <!-- ── SECTION 1: O QUE É A COURAÇA ── -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-num">01</span>
+      <h2 class="section-title">O que é a<br><em>Couraça Muscular?</em></h2>
+    </div>
+  </section>
+
+  <div class="armoring-grid">
+    <div class="armor-visual">
+      <!-- SVG abstrato representando energia bloqueada vs fluindo -->
+      <svg viewBox="0 0 240 320" width="200" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Energia fluindo — ondas sinusoidais suaves -->
+        <path d="M20 60 Q60 30 100 60 Q140 90 180 60 Q220 30 240 50" stroke="#4a6741" stroke-width="1.5" opacity="0.5" stroke-dasharray="200" stroke-dashoffset="200">
+          <animate attributeName="stroke-dashoffset" from="200" to="0" dur="2s" fill="freeze"/>
+        </path>
+        <path d="M20 90 Q60 60 100 90 Q140 120 180 90 Q220 60 240 80" stroke="#4a6741" stroke-width="1.5" opacity="0.4" stroke-dasharray="200" stroke-dashoffset="200">
+          <animate attributeName="stroke-dashoffset" from="200" to="0" dur="2s" begin="0.3s" fill="freeze"/>
+        </path>
+
+        <!-- Barreira — couraça -->
+        <rect x="10" y="130" width="220" height="8" rx="2" fill="#8b3a1e" opacity="0.7"/>
+        <text x="120" y="126" text-anchor="middle" fill="#d4a96a" font-size="9" font-family="serif" letter-spacing="2">COURAÇA</text>
+
+        <!-- Energia bloqueada e comprimida abaixo -->
+        <path d="M30 170 Q50 150 70 170 Q90 190 110 170" stroke="#b8872a" stroke-width="1.5" opacity="0.8"/>
+        <path d="M100 200 Q120 180 140 200 Q160 220 180 200" stroke="#b8872a" stroke-width="1.5" opacity="0.6"/>
+        <circle cx="80" cy="230" r="20" stroke="#8b3a1e" stroke-width="1" opacity="0.4" stroke-dasharray="4 3">
+          <animate attributeName="r" values="18;22;18" dur="2s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="160" cy="240" r="14" stroke="#8b3a1e" stroke-width="1" opacity="0.35" stroke-dasharray="3 2">
+          <animate attributeName="r" values="12;16;12" dur="2.5s" repeatCount="indefinite"/>
+        </circle>
+
+        <!-- Labels -->
+        <text x="120" y="46" text-anchor="middle" fill="#4a6741" font-size="8" font-family="serif" letter-spacing="1.5" opacity="0.8">ENERGIA LIVRE</text>
+        <text x="120" y="285" text-anchor="middle" fill="#d4a96a" font-size="8" font-family="serif" letter-spacing="1.5" opacity="0.7">ENERGIA REPRIMIDA</text>
+      </svg>
+    </div>
+    <div class="armor-content">
+      <p>Wilhelm Reich (1897–1957) foi o primeiro terapeuta a perceber que <strong>a repressão emocional não é apenas psicológica</strong> — ela se materializa como tensão crônica no corpo.</p>
+      <p>Quando sentimentos intensos — raiva, medo, tristeza, prazer — são repetidamente bloqueados, os músculos aprendem a contê-los de forma permanente. Esse padrão de tensão muscular crônica é o que Reich denominou <strong>couraça muscular</strong> (Muskelpanzer).</p>
+      <p>A couraça não é metáfora: é uma contração real, mensurável, que altera a respiração, a postura e o fluxo de energia vital no organismo — energia que Reich chamou de <strong>orgone</strong>.</p>
+      <p>O trabalho terapêutico reichiano consiste, fundamentalmente, em <em>dissolver essas couraças</em> — devolvendo ao corpo sua capacidade natural de pulsação e expressão emocional.</p>
+    </div>
+  </div>
+
+  <!-- ── SEGMENTOS ── -->
+  <div class="segments-strip">
+    <p class="seg-title">Os Sete Segmentos da Couraça</p>
+    <div class="segments-list">
+      <div class="seg-item">
+        <div class="seg-name">1. Ocular</div>
+        <div class="seg-desc">Testa, olhos, nariz. Olhar fixo ou vazio, repressão do choro e da percepção.</div>
+      </div>
+      <div class="seg-item">
+        <div class="seg-name">2. Oral</div>
+        <div class="seg-desc">Lábios, queixo, garganta. Bloqueia choro, gritos, morder — expressões de necessidade.</div>
+      </div>
+      <div class="seg-item">
+        <div class="seg-name">3. Cervical</div>
+        <div class="seg-desc">Pescoço, língua. Reprime impulsos de fala e engolimento emocional.</div>
+      </div>
+      <div class="seg-item">
+        <div class="seg-name">4. Torácico</div>
+        <div class="seg-desc">Peito, ombros, braços. Contém a expansão afetiva e o anseio de contato.</div>
+      </div>
+      <div class="seg-item">
+        <div class="seg-name">5. Diafragmático</div>
+        <div class="seg-desc">Diafragma, plexo solar. Bloqueia o fôlego — nó central da repressão emocional.</div>
+      </div>
+      <div class="seg-item">
+        <div class="seg-name">6. Abdominal</div>
+        <div class="seg-desc">Abdome, lombar. Reprime raiva e agressividade, tensão de sobrevivência.</div>
+      </div>
+      <div class="seg-item">
+        <div class="seg-name">7. Pélvico</div>
+        <div class="seg-desc">Pelve, genitais, nádegas. Bloqueia sexualidade e o reflexo orgástico natural.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ornamental-divider">· · ✦ · ·</div>
+
+  <!-- ── AMEBA ── -->
+  <div class="amoeba-section">
+    <p class="amoeba-header">Experimento Fundamental · 1936</p>
+    <h2 class="amoeba-title">A <em>Ameba</em> e o<br>Princípio da Vida</h2>
+    <div class="amoeba-cols">
+      <div class="amoeba-text">
+        <p>Em 1936, em Oslo, Reich realizou um experimento que seria central para toda sua teoria biológica: observou amebas vivas ao microscópio em condições de <strong>prazer e de angústia</strong>.</p>
+        <p>Quando estimuladas de forma suave — calor, luz adequada —, as amebas <strong>expandiam-se</strong>, seus pseudópodes se alongavam, o protoplasma fluía com vivacidade. Era a <em>pulsação da vida</em>: contração e expansão rítmicas e harmoniosas.</p>
+        <p>Quando submetidas a estímulos aversivos — choque elétrico ou toque brusco —, as amebas <strong>contraíam-se bruscamente</strong>, encolhiam-se sobre si mesmas, cessavam seu fluxo. Reich chamou isso de <em>angústia biológica</em>.</p>
+        <p>A descoberta foi revolucionária: <strong>o medo não é apenas psicológico</strong>. É uma resposta contráctil do protoplasma — o mesmo mecanismo que, cronificado em seres humanos, produz a couraça muscular.</p>
+      </div>
+      <div class="amoeba-viz">
+        <svg class="amoeba-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <!-- Ameba em estado de expansão — forma orgânica e fluida -->
+          <defs>
+            <radialGradient id="amoeba-fill" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#4a6741" stop-opacity="0.5"/>
+              <stop offset="100%" stop-color="#4a6741" stop-opacity="0.1"/>
+            </radialGradient>
+          </defs>
+
+          <!-- Label EXPANSÃO -->
+          <text x="100" y="18" text-anchor="middle" fill="#4a6741" font-size="9" font-family="serif" letter-spacing="2" opacity="0.8">EXPANSÃO · PRAZER</text>
+
+          <!-- Ameba expandida — pseudópodes -->
+          <path id="amoeba-path"
+            d="M100,35 C130,30 160,50 170,80 C185,115 165,145 140,155 C118,165 95,175 75,162 C52,148 35,128 32,100 C28,70 45,45 70,38 C82,34 92,36 100,35 Z"
+            fill="url(#amoeba-fill)"
+            stroke="#4a6741"
+            stroke-width="1.5"
+            opacity="0.85">
+            <animate attributeName="d"
+              values="M100,35 C130,30 160,50 170,80 C185,115 165,145 140,155 C118,165 95,175 75,162 C52,148 35,128 32,100 C28,70 45,45 70,38 C82,34 92,36 100,35 Z;
+                      M100,28 C138,22 168,48 175,82 C182,120 162,152 135,162 C112,170 88,178 66,160 C42,142 28,118 30,90 C32,62 48,38 74,32 C86,28 94,30 100,28 Z;
+                      M100,35 C130,30 160,50 170,80 C185,115 165,145 140,155 C118,165 95,175 75,162 C52,148 35,128 32,100 C28,70 45,45 70,38 C82,34 92,36 100,35 Z"
+              dur="3s" repeatCount="indefinite" calcMode="spline"
+              keySplines="0.4 0 0.6 1; 0.4 0 0.6 1"/>
+          </path>
+
+          <!-- Núcleo -->
+          <ellipse cx="100" cy="100" rx="22" ry="18" fill="#4a6741" opacity="0.4"/>
+          <ellipse cx="100" cy="100" rx="12" ry="10" fill="#4a6741" opacity="0.6"/>
+
+          <!-- Pseudópodes animados -->
+          <circle cx="170" cy="80" r="5" fill="none" stroke="#4a6741" stroke-width="1" opacity="0.5">
+            <animate attributeName="cx" values="170;175;170" dur="2s" repeatCount="indefinite"/>
+            <animate attributeName="r" values="5;7;5" dur="2s" repeatCount="indefinite"/>
+          </circle>
+          <circle cx="75" cy="165" r="4" fill="none" stroke="#4a6741" stroke-width="1" opacity="0.4">
+            <animate attributeName="cy" values="165;170;165" dur="2.5s" repeatCount="indefinite"/>
+          </circle>
+
+          <!-- Ameba contraída (pequena, à direita) -->
+          <g transform="translate(145, 145)">
+            <circle cx="0" cy="0" r="16" fill="#8b3a1e" opacity="0.15" stroke="#8b3a1e" stroke-width="1.2" stroke-dasharray="3 2">
+              <animate attributeName="r" values="16;14;16" dur="1.2s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="0" cy="0" r="7" fill="#8b3a1e" opacity="0.35"/>
+            <text x="0" y="28" text-anchor="middle" fill="#d4a96a" font-size="7" font-family="serif" opacity="0.9">CONTRAÇÃO</text>
+          </g>
+
+          <!-- Seta indicando contração -->
+          <line x1="130" y1="142" x2="142" y2="148" stroke="#d4a96a" stroke-width="0.8" opacity="0.5"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── QUOTE ── -->
+  <blockquote class="quote-block">
+    <p class="quote-text">O organismo vivo pulsiona entre a expansão prazerosa e a contração ansiosa. A couraça nada mais é do que essa contração tornada crônica — o medo petrificado em músculo.</p>
+    <p class="quote-source">— Wilhelm Reich · A Função do Orgasmo, 1942</p>
+  </blockquote>
+
+  <!-- ── BIOGRAFIA RÁPIDA ── -->
+  <div class="bio-strip">
+    <div class="bio-year-col">
+      <!-- Retrato estilizado SVG -->
+      <div class="bio-portrait">
+        <svg viewBox="0 0 100 130" width="100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Silhueta de rosto estilizada -->
+          <ellipse cx="50" cy="42" rx="28" ry="32" fill="none" stroke="#b8872a" stroke-width="1"/>
+          <path d="M22 55 C15 80 18 105 50 115 C82 105 85 80 78 55" fill="#1a0e08" opacity="0.4"/>
+          <ellipse cx="50" cy="42" rx="28" ry="32" fill="#1a2a20"/>
+          <!-- traços do rosto -->
+          <ellipse cx="40" cy="38" rx="5" ry="6" fill="none" stroke="#b8872a" stroke-width="0.8" opacity="0.7"/>
+          <ellipse cx="60" cy="38" rx="5" ry="6" fill="none" stroke="#b8872a" stroke-width="0.8" opacity="0.7"/>
+          <path d="M38 54 Q50 60 62 54" stroke="#b8872a" stroke-width="0.8" fill="none" opacity="0.6"/>
+          <line x1="50" y1="45" x2="50" y2="52" stroke="#b8872a" stroke-width="0.6" opacity="0.5"/>
+          <!-- cabelo -->
+          <path d="M22 40 Q24 18 50 14 Q76 18 78 40" fill="#b8872a" opacity="0.2"/>
+          <!-- gravata / colarinho -->
+          <path d="M38 74 L50 90 L62 74" stroke="#b8872a" stroke-width="1" fill="none" opacity="0.5"/>
+          <line x1="30" y1="74" x2="70" y2="74" stroke="#b8872a" stroke-width="0.8" opacity="0.4"/>
+        </svg>
+      </div>
+    </div>
+    <div class="bio-text-col">
+      <h3>Wilhelm Reich (1897–1957)</h3>
+      <p>Médico, psiquiatra e pesquisador austríaco, Reich foi discípulo de Sigmund Freud antes de abrir seu próprio caminho. Integrou a psicanálise à biologia e à política, desenvolvendo a <strong>Vegetoterapia Caractero-Analítica</strong> — a primeira abordagem psicoterapêutica a trabalhar diretamente com o corpo.</p>
+      <p>Perseguido pelo nazismo e pelo stalinismo, imigrou para os EUA em 1939, onde fundou o <em>Instituto Orgone</em>. Controverso e visionário, passou seus últimos anos em conflito com a FDA americana, vindo a falecer na prisão em 1957.</p>
+      <p>Sua obra influenciou profundamente a psicologia somática, a bioenergética (Lowen), a gestalt, a psicoterapia corporal e inúmeras abordagens terapêuticas contemporâneas.</p>
+    </div>
+  </div>
+
+  <!-- ── CONCEITOS CHAVE ── -->
+  <div class="concepts-row">
+    <div class="concept-card">
+      <span class="concept-icon">⚡</span>
+      <div class="concept-name">Energia Orgone</div>
+      <div class="concept-desc">Para Reich, existe uma energia vital primordial — o orgone — que permeia todos os seres vivos e que deve fluir livremente para a saúde plena.</div>
+    </div>
+    <div class="concept-card">
+      <span class="concept-icon">🌊</span>
+      <div class="concept-name">Reflexo Orgástico</div>
+      <div class="concept-desc">A capacidade de entrega total à pulsação corporal, sem controle muscular. Reich via esse reflexo como indicador de saúde psicofísica.</div>
+    </div>
+    <div class="concept-card">
+      <span class="concept-icon">🧬</span>
+      <div class="concept-name">Biofísica das Emoções</div>
+      <div class="concept-desc">As emoções não são abstratas: são fenômenos bioelétricos e plasmáticos, visíveis no protoplasma vivo, como demonstrou com os experimentos com amebas.</div>
+    </div>
+  </div>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <div>
+      <div class="footer-brand">Reich & o Corpo Vivo</div>
+      <div class="footer-tagline">Psicologia Somática · Vegetoterapia · Psicoterapia Reichiana</div>
+    </div>
+    <div class="footer-right">
+      1897 – 1957<br>Obra & Legado
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
