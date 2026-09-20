@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>O Corpo que Guarda — Corpo Vivo</title>
+  <meta name="description" content="Por que meu corpo trava quando fico com medo? O mecanismo pelo qual emoções não processadas se instalam no sistema nervoso, nos músculos e na respiração.">
+  <meta name="keywords" content="por que meu corpo trava com medo, tensão muscular crônica, ansiedade no diafragma, sistema nervoso autônomo, memória corporal implícita, trauma no corpo, corpo guarda emoções, interocepção">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,900;1,400;1,600&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .article-body h3 {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      font-weight: 600;
+      color: var(--warm);
+      margin: 52px 0 16px;
+      padding-top: 52px;
+      border-top: 1px solid var(--border);
+    }
+    .article-body h3:first-of-type {
+      margin-top: 40px;
+      padding-top: 40px;
+    }
+    .article-body p {
+      margin-bottom: 20px;
+      max-width: 70ch;
+    }
+    .article-body p:last-child { margin-bottom: 0; }
+
+    .corpo-bloco {
+      background: var(--bg-alt);
+      border-left: 3px solid var(--sage);
+      padding: 28px 32px;
+      margin: 32px 0;
+      max-width: 66ch;
+    }
+    .corpo-bloco p {
+      font-size: 0.97rem;
+      color: var(--text-soft);
+      margin-bottom: 10px;
+      max-width: 100%;
+    }
+    .corpo-bloco p:last-child { margin-bottom: 0; }
+    .corpo-bloco strong { color: var(--text); }
+
+    .segmentos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin: 32px 0;
+    }
+    .seg {
+      background: white;
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--warm);
+      padding: 20px;
+      transition: border-color 0.2s;
+    }
+    .seg:hover { border-color: var(--accent); border-top-color: var(--accent); }
+    .seg-nome {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--warm);
+      margin-bottom: 8px;
+    }
+    .seg-desc {
+      font-size: 0.9rem;
+      line-height: 1.65;
+      color: var(--text-soft);
+    }
+
+    .pergunta-reflexao {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-style: italic;
+      color: var(--text-soft);
+      border-left: 3px solid var(--accent);
+      padding-left: 24px;
+      margin: 32px 0;
+      max-width: 58ch;
+      line-height: 1.6;
+    }
+
+    .pesquisadores-strip {
+      background: var(--bg-vera);
+      padding: 32px 40px;
+      margin-top: 56px;
+    }
+    .pesquisadores-strip h3 {
+      border-top: none;
+      padding-top: 0;
+      margin-top: 0;
+      margin-bottom: 16px;
+      font-size: 1.2rem;
+    }
+    .pesquisadores-strip p {
+      font-size: 0.97rem;
+      color: var(--text-soft);
+      margin-bottom: 12px;
+    }
+
+    @media (max-width: 860px) {
+      .segmentos-grid { grid-template-columns: 1fr 1fr; }
+      .pesquisadores-strip { padding: 24px; }
+    }
+    @media (max-width: 560px) {
+      .segmentos-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">Corpo<span>Vivo</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Início</a></li>
+      <li><a href="o-corpo-que-guarda.html">O Corpo que Guarda</a></li>
+      <li><a href="a-ciencia.html">A Ciência</a></li>
+      <li><a href="caminhos.html">Caminhos</a></li>
+      <li><a href="jornada.html">Minha Jornada</a></li>
+      <li><a href="blog/index.html">Blog</a></li>
+      <li><a href="contato.html">Contato</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<ul class="nav-mobile">
+  <li><a href="index.html">Início</a></li>
+  <li><a href="o-corpo-que-guarda.html">O Corpo que Guarda</a></li>
+  <li><a href="a-ciencia.html">A Ciência</a></li>
+  <li><a href="caminhos.html">Caminhos</a></li>
+  <li><a href="jornada.html">Minha Jornada</a></li>
+  <li><a href="blog/index.html">Blog</a></li>
+  <li><a href="contato.html">Contato</a></li>
+</ul>
+
+<main>
+
+  <div class="page-hero container">
+    <p class="section-label">Por que meu corpo reage assim?</p>
+    <h1>O Corpo que Guarda</h1>
+    <p class="lead">Quando o que vivemos não encontra saída, o corpo encontra um lugar para guardar. Entender esse mecanismo é o primeiro passo para escutá-lo.</p>
+  </div>
+
+  <div class="container" style="padding-bottom: 80px;">
+    <article class="article-body">
+
+      <p>Você já sentiu o coração acelerar antes de entender por quê? O estômago fechar diante de uma situação que "não deveria" incomodar? Os ombros subirem quando alguém eleva a voz? Isso não é fraqueza, não é exagero e não é só psicológico. É o sistema nervoso fazendo exatamente o que foi projetado para fazer.</p>
+
+      <p>O corpo responde ao ambiente antes da mente nomear o que está acontecendo. Essa resposta é automática, rápida e eficiente. O problema não é ela existir. O problema é quando ela fica.</p>
+
+      <h3>O mecanismo básico: o sistema nervoso como radar</h3>
+
+      <p>O sistema nervoso autônomo opera em dois modos principais. No modo simpático, o organismo se prepara para agir: o coração acelera, os músculos ficam prontos, a respiração fica mais curta e superficial. No modo parassimpático, o organismo descansa, digere, se recupera.</p>
+
+      <p>Quando percebemos uma ameaça, real ou imaginada, o modo simpático assume. O corpo se contrai, tensiona, se prepara. Se a ameaça passa e a resposta se completa, o sistema retorna ao equilíbrio. Isso acontece naturalmente com animais na natureza: uma gazela que escapa de um predador treme violentamente por alguns minutos e depois volta a pastar. A resposta se completou.</p>
+
+      <p>Em humanos, porém, frequentemente interrompemos esse ciclo. Por pressão social, por necessidade de funcionar, por aprendizado de que certas emoções "não devem" ser sentidas. Contemos o choro, engolimos a raiva, seguramos a respiração, travamos o corpo. A resposta não se completa. A tensão fica.</p>
+
+      <div class="corpo-bloco">
+        <p><strong>Tensão muscular crônica</strong> é uma resposta de defesa que nunca terminou. Não é fraqueza muscular, não é postura ruim. É o corpo ainda preparado para uma ameaça que pode ter passado há anos.</p>
+      </div>
+
+      <h3>O que fica quando não passa</h3>
+
+      <p>Quando respostas de estresse são repetidamente interrompidas, o sistema nervoso aprende padrões. A musculatura aprende a se contrair em certas situações. A respiração aprende a ficar rasa. A postura aprende a se fechar. Com o tempo, esses padrões se tornam o "normal" do corpo, tão habituais que deixamos de percebê-los.</p>
+
+      <p>A pesquisa sobre memória corporal mostra que o corpo possui sua própria forma de memória, distinta da memória narrativa consciente. Enquanto a memória episódica guarda histórias com começo, meio e fim, a memória procedural e implícita guarda padrões: como segurar o corpo diante de autoridade, como respirar quando alguém grita, como contrair o abdome quando há tensão no ambiente.</p>
+
+      <p>Esses padrões não precisam de narrativa para se manter ativos. Eles operam abaixo do nível da consciência, moldando a forma como vivemos o presente a partir do que foi vivido antes.</p>
+
+      <div class="corpo-bloco">
+        <p><strong>Memória implícita</strong> é o conjunto de padrões corporais e emocionais que o sistema nervoso armazena sem precisar de palavras. Você não lembra como aprendeu a andar de bicicleta: o corpo simplesmente sabe. Da mesma forma, o corpo pode "saber" como reagir a certas emoções sem que a mente tenha acesso a esse aprendizado.</p>
+      </div>
+
+      <h3>Onde no corpo a tensão se instala</h3>
+
+      <p>A tensão crônica não se distribui aleatoriamente. Ela se concentra nas regiões do corpo associadas às respostas defensivas e emocionais mais básicas. Reconhecer esses pontos não é fazer diagnóstico: é aprender a ler um mapa.</p>
+
+      <div class="segmentos-grid">
+        <div class="seg">
+          <div class="seg-nome">Olhos e testa</div>
+          <div class="seg-desc">A vigilância se instala aqui. O olhar fixo, a testa franzida habitual, a tensão ao redor dos olhos como estado constante de alerta.</div>
+        </div>
+        <div class="seg">
+          <div class="seg-nome">Mandíbula e pescoço</div>
+          <div class="seg-desc">Onde contemos o que queremos dizer e o que queremos gritar. A mandíbula trancada, o pescoço rígido. A voz que não sai.</div>
+        </div>
+        <div class="seg">
+          <div class="seg-nome">Ombros e peito</div>
+          <div class="seg-desc">O peso que se carrega, o afeto que se contém. Ombros encurvados para dentro, peito fechado como proteção do que é vulnerável.</div>
+        </div>
+        <div class="seg">
+          <div class="seg-nome">Diafragma</div>
+          <div class="seg-desc">O nó central. O diafragma é o músculo da respiração e o músculo do medo. Quando a ansiedade "mora no estômago", é aqui que ela se instala.</div>
+        </div>
+        <div class="seg">
+          <div class="seg-nome">Abdome e lombar</div>
+          <div class="seg-desc">Raiva não expressa, necessidade de proteção, instinto de sobrevivência contido. A barriga dura, a lombar travada.</div>
+        </div>
+        <div class="seg">
+          <div class="seg-nome">Pelve e quadril</div>
+          <div class="seg-desc">A base do corpo, onde a energia vital e a sexualidade se expressam. Tensão crônica aqui bloqueia o fluxo de sensação por todo o organismo.</div>
+        </div>
+      </div>
+
+      <p>Esses pontos foram descritos por Wilhelm Reich nos anos 1930 a partir de observação clínica. Décadas depois, a pesquisa em neurociência do trauma confirmou: a tensão muscular crônica nessas regiões é uma das manifestações físicas documentadas do estresse não processado.</p>
+
+      <h3>A interocepção: quando o corpo fala</h3>
+
+      <p>Interocepção é a capacidade de perceber o que acontece dentro do próprio corpo. Batimentos cardíacos, respiração, tensão muscular, sensações viscerais. Essa capacidade está na base da inteligência emocional: antes de nomear uma emoção, o cérebro recebe sinais do corpo.</p>
+
+      <p>Quando dizemos "sinto no estômago que algo está errado" ou "meu coração disparou sem razão aparente", estamos descrevendo interocepção. O corpo informou antes da mente concluir.</p>
+
+      <p>A pesquisa em interocepção, hoje um campo científico consolidado, mostra que essa capacidade pode ser desenvolvida. Pessoas que aprendem a perceber os sinais corporais com mais precisão têm maior capacidade de regular emoções, maior consciência de seus estados internos e maior resiliência diante de situações de estresse.</p>
+
+      <div class="pergunta-reflexao">
+        O seu corpo está tentando te dizer algo que a sua mente ainda não encontrou palavras para nomear?
+      </div>
+
+      <h3>O que isso tem a ver com você</h3>
+
+      <p>Se você chegou até aqui, provavelmente reconheceu algo. Talvez a tensão crônica nos ombros. Talvez a respiração curta em situações de pressão. Talvez o coração que dispara sem que você entenda por quê.</p>
+
+      <p>Reconhecer o mecanismo não é o mesmo que resolver, mas é o início. O corpo não guarda para punir. Guarda porque é o que sabe fazer com o que não teve como processar. E o que foi aprendido pode, com o tempo e as ferramentas certas, ser reaprendido.</p>
+
+      <p>As próximas seções deste site mostram quem documentou isso cientificamente e quais caminhos existem para trabalhar com o corpo nesse sentido.</p>
+
+      <!-- Pesquisadores que documentaram -->
+      <div class="pesquisadores-strip">
+        <h3>Quem documentou isso</h3>
+        <p>Wilhelm Reich foi o primeiro a descrever sistematicamente a tensão muscular como expressão de emoção retida, nos anos 1930. Bessel van der Kolk mapeou com neuroimagem como o trauma se instala no sistema nervoso. Stephen Porges desenvolveu a teoria polivagal, explicando como o sistema nervoso autônomo regula segurança e ameaça. Peter Levine mostrou como o corpo completa respostas de estresse interrompidas. Audrey van der Meer demonstrou com EEG de alta densidade que movimento e cérebro formam um sistema integrado.</p>
+        <p>Cada um contribuiu com uma peça. O mapa está sendo construído por muitas mãos.</p>
+        <a href="a-ciencia.html" class="btn btn-outline" style="margin-top: 20px; display: inline-block;">Ver os pesquisadores</a>
+        <a href="caminhos.html" class="btn btn-primary" style="margin-top: 20px; margin-left: 12px; display: inline-block;">Ver os caminhos</a>
+      </div>
+
+    </article>
+
+    <div class="disclaimer" style="margin-top: 48px;">
+      Este conteúdo tem finalidade exclusivamente informativa e educacional. Não substitui acompanhamento psicoterápico, médico ou qualquer outro tipo de cuidado profissional.
+    </div>
+  </div>
+
+</main>
+
+<footer class="footer">
+  <div class="container-lg">
+    <div class="footer-inner">
+      <div>
+        <a href="index.html" class="footer-brand">Corpo<span>Vivo</span></a>
+        <p class="footer-desc">O corpo registra, carrega e pode ajudar a liberar o que vivemos.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Conteúdo</h4>
+        <ul>
+          <li><a href="o-corpo-que-guarda.html">O Corpo que Guarda</a></li>
+          <li><a href="a-ciencia.html">A Ciência</a></li>
+          <li><a href="caminhos.html">Caminhos</a></li>
+          <li><a href="jornada.html">Minha Jornada</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Mais</h4>
+        <ul>
+          <li><a href="blog/index.html">Blog</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Nenhuma informação aqui substitui acompanhamento profissional.</p>
+      <p style="margin-top:10px; opacity:0.5;">Produção e Design: Vera Rosendo · Desenvolvimento técnico: Claude (AI)</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
