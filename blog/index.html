@@ -5,20 +5,80 @@
   <link rel="icon" type="image/png" href="../favicon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blog — Corpo Vivo</title>
+  <meta name="description" content="Artigos sobre corpo, emoção, neurociência e memória corporal. Por que o corpo reage, o que a ciência encontrou e como é possível mudar.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,900;1,400;1,600&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 32px;
+      margin-top: 48px;
+    }
+    .blog-card {
+      border-top: 2px solid var(--border);
+      padding: 28px 0 32px;
+      transition: border-color 0.2s;
+    }
+    .blog-card:hover { border-color: var(--accent); }
+    .blog-card-tag {
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      color: var(--sage);
+      font-style: italic;
+      margin-bottom: 10px;
+    }
+    .blog-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 10px;
+      line-height: 1.3;
+    }
+    .blog-card p {
+      font-size: 0.95rem;
+      color: var(--text-soft);
+      line-height: 1.75;
+      margin-bottom: 16px;
+    }
+    .blog-card a.ler {
+      font-size: 0.88rem;
+      color: var(--sage);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .blog-card a.ler:hover { border-color: var(--sage); }
+    .blog-card-em-breve {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+    .badge-breve {
+      display: inline-block;
+      font-size: 0.72rem;
+      background: var(--bg-alt);
+      color: var(--text-faint);
+      padding: 2px 8px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      font-style: italic;
+      margin-left: 8px;
+    }
+  </style>
 </head>
 <body>
+
 <nav class="nav">
   <div class="nav-inner">
     <a href="../index.html" class="nav-brand">Corpo<span>Vivo</span></a>
     <ul class="nav-links">
       <li><a href="../index.html">Início</a></li>
-      <li><a href="../reich.html">Wilhelm Reich</a></li>
-      <li><a href="../couracas.html">As Couraças</a></li>
-      <li><a href="../bhakti.html">Jornada do Corpo</a></li>
+      <li><a href="../o-corpo-que-guarda.html">O Corpo que Guarda</a></li>
+      <li><a href="../a-ciencia.html">A Ciência</a></li>
+      <li><a href="../caminhos.html">Caminhos</a></li>
       <li><a href="../jornada.html">Minha Jornada</a></li>
       <li><a href="index.html">Blog</a></li>
       <li><a href="../contato.html">Contato</a></li>
@@ -28,36 +88,70 @@
     </button>
   </div>
 </nav>
+
 <ul class="nav-mobile">
   <li><a href="../index.html">Início</a></li>
-  <li><a href="../reich.html">Wilhelm Reich</a></li>
-  <li><a href="../couracas.html">As Couraças</a></li>
-  <li><a href="../bhakti.html">Jornada do Corpo</a></li>
+  <li><a href="../o-corpo-que-guarda.html">O Corpo que Guarda</a></li>
+  <li><a href="../a-ciencia.html">A Ciência</a></li>
+  <li><a href="../caminhos.html">Caminhos</a></li>
   <li><a href="../jornada.html">Minha Jornada</a></li>
   <li><a href="index.html">Blog</a></li>
   <li><a href="../contato.html">Contato</a></li>
 </ul>
+
 <main>
   <div class="page-hero container">
-    <span class="wip-badge">Em construção</span>
+    <p class="section-label">Artigos</p>
     <h1>Blog</h1>
-    <p class="lead">Em breve: artigos sobre corpo, emoção e transformação. Temas como "Você sabia que a ansiedade mora no seu diafragma?" e "O que a ameba nos ensina sobre o medo".</p>
-    <a href="../index.html" class="btn btn-outline" style="margin-top: 32px;">Voltar ao início</a>
+    <p class="lead">Textos sobre corpo, emoção, neurociência e memória corporal. Para quem quer entender antes de sentir, ou sentiu antes de entender.</p>
   </div>
+
+  <div class="container" style="padding-bottom: 80px;">
+    <div class="blog-grid">
+
+      <div class="blog-card blog-card-em-breve">
+        <p class="blog-card-tag">Artigo 01 · Em breve</p>
+        <h3>Por que meu corpo trava quando fico com medo? <span class="badge-breve">em breve</span></h3>
+        <p>O mecanismo pelo qual o sistema nervoso responde ao medo, o que acontece quando essa resposta não se completa, e por que algumas pessoas "travam" mais do que outras.</p>
+      </div>
+
+      <div class="blog-card">
+        <p class="blog-card-tag">Artigo 02 · Neurociência</p>
+        <h3>O que Audrey van der Meer descobriu sobre movimento e cérebro</h3>
+        <p>A neurocientista norueguesa demonstrou com EEG de alta densidade que escrever à mão ativa redes neurais muito mais amplas que digitar. O que isso revela sobre o corpo vivo e conectado.</p>
+        <a href="artigo-02-audrey-van-der-meer.html" class="ler">Ler artigo</a>
+      </div>
+
+      <div class="blog-card blog-card-em-breve">
+        <p class="blog-card-tag">Artigo 03 · Em breve</p>
+        <h3>O diafragma e a ansiedade: o nó no meio do corpo <span class="badge-breve">em breve</span></h3>
+        <p>O músculo da respiração é também o músculo do medo. Por que a ansiedade se instala no diafragma e o que acontece quando aprendemos a trabalhar com ele.</p>
+      </div>
+
+      <div class="blog-card blog-card-em-breve">
+        <p class="blog-card-tag">Artigo 04 · Em breve</p>
+        <h3>Bessel van der Kolk: o corpo guarda o placar <span class="badge-breve">em breve</span></h3>
+        <p>O psiquiatra americano passou décadas estudando trauma e chegou a uma conclusão que mudou a área: o trauma não é uma história que a mente guarda. É um estado que o corpo mantém.</p>
+      </div>
+
+    </div>
+  </div>
+
 </main>
+
 <footer class="footer">
   <div class="container-lg">
     <div class="footer-inner">
       <div>
         <a href="../index.html" class="footer-brand">Corpo<span>Vivo</span></a>
-        <p class="footer-desc">Informação sobre couraças musculares, a obra de Wilhelm Reich e a Jornada do Corpo.</p>
+        <p class="footer-desc">O corpo registra, carrega e pode ajudar a liberar o que vivemos.</p>
       </div>
       <div class="footer-col">
         <h4>Conteúdo</h4>
         <ul>
-          <li><a href="../reich.html">Wilhelm Reich</a></li>
-          <li><a href="../couracas.html">As Couraças</a></li>
-          <li><a href="../bhakti.html">Jornada do Corpo</a></li>
+          <li><a href="../o-corpo-que-guarda.html">O Corpo que Guarda</a></li>
+          <li><a href="../a-ciencia.html">A Ciência</a></li>
+          <li><a href="../caminhos.html">Caminhos</a></li>
           <li><a href="../jornada.html">Minha Jornada</a></li>
         </ul>
       </div>
@@ -65,18 +159,17 @@
         <h4>Mais</h4>
         <ul>
           <li><a href="index.html">Blog</a></li>
-          <li><a href="../recursos.html">Recursos</a></li>
           <li><a href="../contato.html">Contato</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>Conteúdo produzido com cuidado e responsabilidade. Nenhuma informação aqui substitui acompanhamento profissional.</p>
-    
+      <p>Nenhuma informação aqui substitui acompanhamento profissional.</p>
       <p style="margin-top:10px; opacity:0.5;">Produção e Design: Vera Rosendo · Desenvolvimento técnico: Claude (AI)</p>
     </div>
   </div>
 </footer>
+
 <script src="../js/main.js"></script>
 </body>
 </html>
