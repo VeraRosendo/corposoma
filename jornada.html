@@ -5,12 +5,183 @@
   <link rel="icon" type="image/png" href="favicon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Minha Jornada — Corpo Vivo</title>
+  <meta name="description" content="Um relato pessoal sobre percepção corporal aguçada, interocepção e o que a ciência tem a dizer sobre corpos que sabem antes da mente confirmar.">
+  <meta name="keywords" content="interocepção, percepção sensorial, hiperosmia, corpo e intuição, olfato e doenças, Joy Milne, psicologia somática, jornada pessoal">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,900;1,400;1,600&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    .vera-intro {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 48px;
+      align-items: start;
+      margin-bottom: 56px;
+    }
+
+    .vera-photo {
+      width: 180px;
+      aspect-ratio: 3/4;
+      background: var(--bg-alt);
+      border-radius: 2px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-faint);
+      font-size: 0.8rem;
+      font-style: italic;
+      text-align: center;
+      padding: 16px;
+      border: 1px solid var(--border);
+    }
+
+    .vera-intro-text h2 {
+      font-size: 1.5rem;
+      margin-bottom: 8px;
+      color: var(--warm);
+    }
+
+    .vera-intro-text .vera-bio {
+      font-size: 0.95rem;
+      color: var(--text-soft);
+      line-height: 1.75;
+      font-style: italic;
+    }
+
+    .relato {
+      max-width: 70ch;
+    }
+
+    .relato p {
+      font-size: 1.08rem;
+      line-height: 1.9;
+      margin-bottom: 24px;
+      max-width: 70ch;
+    }
+
+    .relato p:last-child { margin-bottom: 0; }
+
+    .relato-abertura {
+      font-family: var(--font-display);
+      font-size: clamp(1.3rem, 2.5vw, 1.7rem);
+      font-style: italic;
+      font-weight: 400;
+      color: var(--text);
+      line-height: 1.5;
+      margin-bottom: 40px;
+      max-width: 62ch;
+    }
+
+    .ciencia-bloco {
+      background: var(--bg-alt);
+      border-left: 3px solid var(--sage);
+      padding: 36px 40px;
+      margin: 56px 0;
+      max-width: 70ch;
+    }
+
+    .ciencia-bloco h3 {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      color: var(--sage);
+      margin-bottom: 16px;
+      font-style: italic;
+      font-weight: 600;
+    }
+
+    .ciencia-bloco p {
+      font-size: 0.97rem;
+      line-height: 1.8;
+      color: var(--text-soft);
+      margin-bottom: 14px;
+      max-width: 100%;
+    }
+
+    .ciencia-bloco p:last-child { margin-bottom: 0; }
+
+    .ciencia-bloco .fonte {
+      font-size: 0.82rem;
+      color: var(--text-faint);
+      font-style: italic;
+      border-top: 1px solid var(--border);
+      padding-top: 14px;
+      margin-top: 20px;
+    }
+
+    .section-divider {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin: 72px 0 56px;
+    }
+
+    .section-divider-line {
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    .section-divider-label {
+      font-family: var(--font-display);
+      font-size: 0.8rem;
+      letter-spacing: 0.15em;
+      color: var(--text-faint);
+      font-style: italic;
+      white-space: nowrap;
+    }
+
+    .coming-soon {
+      background: var(--bg-vera);
+      border-left: 3px solid var(--warm);
+      padding: 40px 40px 44px;
+    }
+
+    .coming-soon .cs-tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      color: var(--text-faint);
+      font-style: italic;
+      margin-bottom: 16px;
+    }
+
+    .coming-soon h2 {
+      font-family: var(--font-display);
+      font-size: 1.8rem;
+      color: var(--warm);
+      margin-bottom: 16px;
+    }
+
+    .coming-soon p {
+      color: var(--text-soft);
+      font-style: italic;
+      max-width: 58ch;
+    }
+
+    .quote-inline {
+      border-left: 3px solid var(--accent);
+      padding-left: 24px;
+      margin: 32px 0;
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-style: italic;
+      color: var(--text);
+      max-width: 60ch;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 860px) {
+      .vera-intro { grid-template-columns: 1fr; }
+      .vera-photo { display: none; }
+      .ciencia-bloco { padding: 24px; }
+      .coming-soon { padding: 28px; }
+    }
+  </style>
 </head>
 <body>
+
 <nav class="nav">
   <div class="nav-inner">
     <a href="index.html" class="nav-brand">Corpo<span>Vivo</span></a>
@@ -28,6 +199,7 @@
     </button>
   </div>
 </nav>
+
 <ul class="nav-mobile">
   <li><a href="index.html">Início</a></li>
   <li><a href="reich.html">Wilhelm Reich</a></li>
@@ -37,14 +209,99 @@
   <li><a href="blog/index.html">Blog</a></li>
   <li><a href="contato.html">Contato</a></li>
 </ul>
+
 <main>
+
   <div class="page-hero container">
-    <span class="wip-badge">Em construção</span>
+    <p class="section-label">Em primeira pessoa</p>
     <h1>Minha Jornada</h1>
-    <p class="lead">Esta página está sendo preparada com cuidado. Volte em breve.</p>
-    <a href="index.html" class="btn btn-outline" style="margin-top: 32px;">Voltar ao início</a>
+    <p class="lead">Não cheguei ao estudo do corpo pelos livros. Cheguei pela experiência acumulada de um corpo que sempre soube mais do que eu conseguia explicar.</p>
   </div>
+
+  <div class="container" style="padding-bottom: 80px;">
+
+    <!-- APRESENTAÇÃO -->
+    <div class="vera-intro">
+      <div class="vera-photo">
+        <span>Foto<br>em breve</span>
+      </div>
+      <div class="vera-intro-text">
+        <h2>Vera Rosendo</h2>
+        <p class="vera-bio">Administradora, escritora, aposentada após 26 anos de serviço público. Estudante de psicanálise clínica e de cidades inteligentes. Filha, mãe, avó, migrante do Brasil profundo. Aluna do trabalho corporal. Criadora deste site, que é também um modo de organizar tudo que fui aprendendo, vivendo e sentindo.</p>
+      </div>
+    </div>
+
+    <!-- PARTE I: O RELATO -->
+    <p class="section-label">Parte I</p>
+    <h2 style="margin-bottom: 32px;">O corpo que percebe antes</h2>
+
+    <p class="relato-abertura">Há décadas, percebo que o corpo sabe de coisas antes da mente confirmar.</p>
+
+    <div class="relato">
+
+      <p>Trabalhando como auxiliar de enfermagem, bastava entrar numa ala para que algo em mim se organizasse sozinho, antes de qualquer prontuário: aquele leito, infecção por fungo. O outro, algo nos rins. Mais além, um cheiro que aprendi a reconhecer como câncer, e o diabetes, com seu odor quase doce, que a maioria das pessoas nem nota.</p>
+
+      <p>Guardei essas percepções para mim durante anos, com receio de que fossem lidas como esquisitice. O paladar seguiu o mesmo caminho: numa degustação informal de café, identifiquei um sabor de oliva num grão que um pesquisador da área elogiou como sinal de paladar sensível.</p>
+
+      <p>Mais recentemente, deitada numa cama de hospital, um socorrista cético sobre eu conseguir sentir minhas próprias extrassístoles fez um teste, virando o monitor de costas para mim. Apontei o momento exato em que sentia algo estranho no peito, todas as vezes. Ele, que segundos antes duvidava, ficou visivelmente surpreso.</p>
+
+      <p>Não foram episódios soltos. Foi sempre a mesma coisa: o corpo sabendo de algo antes de qualquer confirmação externa.</p>
+
+    </div>
+
+    <!-- BLOCO CIENTÍFICO -->
+    <div class="ciencia-bloco">
+      <h3>Não estava sozinha.</h3>
+
+      <p>Joy Milne é uma enfermeira escocesa aposentada que possui hiperosmia hereditária: uma hipersensibilidade olfativa que lhe permite detectar cheiros sutis demais para a maioria das pessoas perceber. Cerca de quinze anos antes de seu marido ser diagnosticado com Parkinson, ela notou que o cheiro dele havia mudado. Durante seus anos como enfermeira, percebeu que pessoas com doenças diferentes exalavam odores distintos. Por décadas, não conectou formalmente as duas coisas.</p>
+
+      <p>Em 2012, pesquisadores da Universidade de Edimburgo testaram sua afirmação: pediram que ela cheirasse doze camisetas, seis de pacientes com Parkinson e seis de pessoas saudáveis. Ela identificou corretamente todos os casos. A única "falha" foi classificar como positiva a camiseta de alguém do grupo saudável. Esse mesmo homem foi diagnosticado com Parkinson menos de um ano depois. Joy foi listada como co-autora do estudo publicado no <em>ACS Central Science</em> em 2019. A pesquisa identificou os compostos que ela detectava no sebo da pele dos pacientes e levou ao desenvolvimento de um teste de diagnóstico com cerca de 95% de precisão.</p>
+
+      <p>O mecanismo por trás disso tem nome: compostos orgânicos voláteis (VOCs). As doenças alteram o metabolismo e produzem substâncias específicas que o organismo libera pela pele, hálito, suor e urina. O diabetes produz um cheiro frutado pela presença de cetonas. Infecções fúngicas têm VOCs próprios. O câncer está associado ao aumento de poliaminas, que têm odor característico. Isso não é intuição mística. É química.</p>
+
+      <p>Já a percepção das próprias extrassístoles tem um campo científico dedicado: a interocepção. A interocepção é o processo pelo qual o sistema nervoso capta, interpreta e integra sinais originados dentro do corpo, incluindo batimentos cardíacos, pressão arterial, estados viscerais. Sinais subconscientes internos podem ascender à consciência, e esse processo pode melhorar com a prática. Pesquisas do Weizmann Institute (2026) demonstraram a base neural dessa percepção. A MIT Technology Review descreveu em 2026: "Os sinais que antes descartávamos como sensações vagas, quando o corpo aperta antes de sabermos por quê, quando o corpo diz sim ou não antes da mente alcançar, esses sinais são reais."</p>
+
+      <p class="fonte">Fontes: ACS Central Science (2019), University of Manchester / Universidade de Edimburgo, MIT Technology Review (2026), Weizmann Institute of Science (2026), National Geographic, Smithsonian Magazine.</p>
+    </div>
+
+    <!-- PONTE PARA O TEMA DO SITE -->
+    <div class="relato">
+
+      <p>Quando encontrei Wilhelm Reich, muitas coisas fizeram sentido de uma forma diferente. Reich não falava de intuição, de dom ou de sensibilidade especial. Falava de um organismo vivo que percebe, registra e responde ao mundo, antes de qualquer elaboração consciente. Falava de como emoções não elaboradas se instalam nos músculos, na respiração, na postura. Falava de um corpo que guarda o que a mente não conseguiu processar.</p>
+
+      <div class="quote-inline">
+        "O organismo vivo pulsiona entre a expansão prazerosa e a contração ansiosa."
+        <br><span style="font-size:0.85rem; font-style:normal; color:var(--text-faint);">Wilhelm Reich</span>
+      </div>
+
+      <p>O que percebi durante anos nas enfermarias, no paladar, no peito, não era esquisitice. Era um corpo com sensibilidade expandida para sinais que a maioria das pessoas aprende a ignorar. E se aprende a ignorar, pode aprender, também, a ouvir.</p>
+
+      <p>Este site nasceu dessa descoberta. Não como manual, não como prescrição. Como partilha de quem foi aprender o que o próprio corpo tinha a dizer.</p>
+
+    </div>
+
+    <!-- DIVISOR -->
+    <div class="section-divider">
+      <div class="section-divider-line"></div>
+      <span class="section-divider-label">Parte II — Em construção</span>
+      <div class="section-divider-line"></div>
+    </div>
+
+    <!-- PLACEHOLDER PARTE 2 -->
+    <div class="coming-soon">
+      <span class="cs-tag">Parte II — A chegada ao trabalho corporal</span>
+      <h2>O que fui encontrar.</h2>
+      <p>Em breve, a continuação: o ponto de ruptura que me trouxe ao trabalho corporal, o que descobri no processo e o que mudou. Não como especialista, mas como alguém que foi aprender o que o próprio corpo tinha a dizer.</p>
+    </div>
+
+    <div class="disclaimer" style="margin-top: 48px;">
+      Este conteúdo tem finalidade exclusivamente informativa e educacional. O relato aqui apresentado é experiência pessoal da autora e não constitui orientação terapêutica ou médica.
+    </div>
+
+  </div>
+
 </main>
+
 <footer class="footer">
   <div class="container-lg">
     <div class="footer-inner">
@@ -71,12 +328,12 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>Conteúdo produzido com cuidado e responsabilidade. Nenhuma informação aqui substitui acompanhamento profissional.</p>
-    
+      <p>Nenhuma informação aqui substitui acompanhamento profissional.</p>
       <p style="margin-top:10px; opacity:0.5;">Produção e Design: Vera Rosendo · Desenvolvimento técnico: Claude (AI)</p>
     </div>
   </div>
 </footer>
+
 <script src="js/main.js"></script>
 </body>
 </html>
