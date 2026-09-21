@@ -64,6 +64,10 @@ p {
   line-height: 1.85;
   max-width: 68ch;
   color: var(--text);
+  text-align: justify;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphenate-limit-chars: 6 3 3;
 }
 
 a {
