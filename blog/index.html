@@ -43,6 +43,7 @@
       color: var(--text-soft);
       line-height: 1.75;
       margin-bottom: 16px;
+      text-align: left;
     }
     .blog-card a.ler {
       font-size: 0.88rem;
@@ -52,10 +53,6 @@
       transition: border-color 0.2s;
     }
     .blog-card a.ler:hover { border-color: var(--sage); }
-    .blog-card-em-breve {
-      opacity: 0.5;
-      pointer-events: none;
-    }
     .badge-breve {
       display: inline-block;
       font-size: 0.72rem;
@@ -81,7 +78,7 @@
       <li><a href="../caminhos.html">Caminhos</a></li>
       <li><a href="../jornada.html">Minha Jornada</a></li>
       <li><a href="index.html">Blog</a></li>
-      <li><a href="../esta-em-crise.html">Contato</a></li>
+      <li><a href="../esta-em-crise.html">Está em crise?</a></li>
     </ul>
     <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -96,7 +93,7 @@
   <li><a href="../caminhos.html">Caminhos</a></li>
   <li><a href="../jornada.html">Minha Jornada</a></li>
   <li><a href="index.html">Blog</a></li>
-  <li><a href="../esta-em-crise.html">Contato</a></li>
+  <li><a href="../esta-em-crise.html">Está em crise?</a></li>
 </ul>
 
 <main>
@@ -109,10 +106,11 @@
   <div class="container" style="padding-bottom: 80px;">
     <div class="blog-grid">
 
-      <div class="blog-card blog-card-em-breve">
-        <p class="blog-card-tag">Artigo 01 · Em breve</p>
-        <h3>Por que meu corpo trava quando fico com medo? <span class="badge-breve">em breve</span></h3>
-        <p>O mecanismo pelo qual o sistema nervoso responde ao medo, o que acontece quando essa resposta não se completa, e por que algumas pessoas "travam" mais do que outras.</p>
+      <div class="blog-card">
+        <p class="blog-card-tag">Artigo 01 · Sistema nervoso</p>
+        <h3>Por que meu corpo trava quando fico com medo?</h3>
+        <p>O coração acelera, a respiração muda, e às vezes o corpo simplesmente para. Não é fraqueza. É um mecanismo do sistema nervoso com nome, explicação e, o mais importante, saída.</p>
+        <a href="artigo-01-por-que-o-corpo-trava.html" class="ler">Ler artigo</a>
       </div>
 
       <div class="blog-card">
@@ -122,21 +120,28 @@
         <a href="artigo-02-audrey-van-der-meer.html" class="ler">Ler artigo</a>
       </div>
 
-      <div class="blog-card blog-card-em-breve">
-        <p class="blog-card-tag">Artigo 03 · Em breve</p>
-        <h3>O diafragma e a ansiedade: o nó no meio do corpo <span class="badge-breve">em breve</span></h3>
-        <p>O músculo da respiração é também o músculo do medo. Por que a ansiedade se instala no diafragma e o que acontece quando aprendemos a trabalhar com ele.</p>
+      <div class="blog-card">
+        <p class="blog-card-tag">Artigo 03 · Respiração</p>
+        <h3>O diafragma e a ansiedade: o nó no meio do corpo</h3>
+        <p>Antes de qualquer pensamento sobre o que está errado, o corpo já mudou a forma de respirar. O diafragma é o primeiro a saber, e o último a ser escutado.</p>
+        <a href="artigo-03-diafragma-e-ansiedade.html" class="ler">Ler artigo</a>
       </div>
 
-      <div class="blog-card blog-card-em-breve">
-        <p class="blog-card-tag">Artigo 04 · Em breve</p>
-        <h3>Bessel van der Kolk: o corpo guarda o placar <span class="badge-breve">em breve</span></h3>
-        <p>O psiquiatra americano passou décadas estudando trauma e chegou a uma conclusão que mudou a área: o trauma não é uma história que a mente guarda. É um estado que o corpo mantém.</p>
+      <div class="blog-card">
+        <p class="blog-card-tag">Artigo 04 · Trauma e corpo</p>
+        <h3>Bessel van der Kolk: o corpo guarda as marcas</h3>
+        <p>Antes de ser um livro best-seller, foi uma imagem de ressonância magnética. Foi ali que a pesquisa de Van der Kolk começou a mudar o que sabemos sobre trauma, memória e corpo.</p>
+        <a href="artigo-04-bessel-van-der-kolk.html" class="ler">Ler artigo</a>
+      </div>
+
+      <div class="blog-card">
+        <p class="blog-card-tag">Artigo 05 · Em breve</p>
+        <h3>Cortisol: por que a incerteza é mais estressante que o perigo <span class="badge-breve">em breve</span></h3>
+        <p>A ciência confirma o que muitos já sentiam: não é o risco em si que mais eleva o cortisol, é o não saber. E existem formas concretas, respaldadas por pesquisa, de reduzir essa carga.</p>
       </div>
 
     </div>
   </div>
-
 </main>
 
 <footer class="footer">
@@ -159,7 +164,7 @@
         <h4>Mais</h4>
         <ul>
           <li><a href="index.html">Blog</a></li>
-          <li><a href="../esta-em-crise.html">Contato</a></li>
+          <li><a href="../esta-em-crise.html">Está em crise?</a></li>
         </ul>
       </div>
     </div>
