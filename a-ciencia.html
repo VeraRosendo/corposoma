@@ -5,12 +5,92 @@
   <link rel="icon" type="image/png" href="favicon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>A Ciência — Corpo Vivo</title>
+  <meta name="description" content="Cinco campos de pesquisa, décadas diferentes, um mesmo ponto de chegada: o corpo registra o que vivemos. Conheça Reich, Van der Kolk, Porges, Levine, Van der Meer e a interocepção.">
+  <meta name="keywords" content="wilhelm reich couraça muscular, bessel van der kolk corpo guarda as marcas, stephen porges teoria polivagal, peter levine somatic experiencing, audrey van der meer neurociência, interocepção">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,900;1,400;1,600&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    .article-body h3 {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      font-weight: 600;
+      color: var(--warm);
+      margin: 52px 0 4px;
+      padding-top: 52px;
+      border-top: 1px solid var(--border);
+    }
+    .article-body h3:first-of-type {
+      margin-top: 40px;
+      padding-top: 40px;
+    }
+    .researcher-years {
+      display: block;
+      font-size: 0.85rem;
+      font-style: italic;
+      color: var(--text-faint);
+      margin-bottom: 20px;
+    }
+    .article-body p {
+      margin-bottom: 20px;
+      max-width: 70ch;
+    }
+    .article-body p:last-child { margin-bottom: 0; }
+
+    .corpo-bloco {
+      background: var(--bg-alt);
+      border-left: 3px solid var(--sage);
+      padding: 28px 32px;
+      margin: 32px 0;
+      max-width: 66ch;
+    }
+    .corpo-bloco p {
+      font-size: 0.97rem;
+      color: var(--text-soft);
+      margin-bottom: 10px;
+      max-width: 100%;
+    }
+    .corpo-bloco p:last-child { margin-bottom: 0; }
+    .corpo-bloco strong { color: var(--text); }
+
+    .pergunta-reflexao {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-style: italic;
+      color: var(--text-soft);
+      border-left: 3px solid var(--accent);
+      padding-left: 24px;
+      margin: 40px 0 32px;
+      max-width: 58ch;
+      line-height: 1.6;
+    }
+
+    .pesquisadores-strip {
+      background: var(--bg-vera);
+      padding: 32px 40px;
+      margin-top: 56px;
+    }
+    .pesquisadores-strip h3 {
+      border-top: none;
+      padding-top: 0;
+      margin-top: 0;
+      margin-bottom: 16px;
+      font-size: 1.2rem;
+    }
+    .pesquisadores-strip p {
+      font-size: 0.97rem;
+      color: var(--text-soft);
+      margin-bottom: 12px;
+    }
+
+    @media (max-width: 860px) {
+      .pesquisadores-strip { padding: 24px; }
+    }
+  </style>
 </head>
 <body>
+
 <nav class="nav">
   <div class="nav-inner">
     <a href="index.html" class="nav-brand">Corpo<span>Vivo</span></a>
@@ -20,31 +100,113 @@
       <li><a href="a-ciencia.html">A Ciência</a></li>
       <li><a href="caminhos.html">Caminhos</a></li>
       <li><a href="jornada.html">Minha Jornada</a></li>
-      <li><a href="blog/index.html">Artigos</a></li>
-      <li><a href="esta-em-crise.html">Está em crise?</a></li>
+      <li><a href="blog/index.html">Blog</a></li>
+      <li><a href="contato.html">Contato</a></li>
     </ul>
     <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </div>
 </nav>
+
 <ul class="nav-mobile">
   <li><a href="index.html">Início</a></li>
   <li><a href="o-corpo-que-guarda.html">O Corpo que Guarda</a></li>
   <li><a href="a-ciencia.html">A Ciência</a></li>
   <li><a href="caminhos.html">Caminhos</a></li>
   <li><a href="jornada.html">Minha Jornada</a></li>
-  <li><a href="blog/index.html">Artigos</a></li>
-  <li><a href="esta-em-crise.html">Está em crise?</a></li>
+  <li><a href="blog/index.html">Blog</a></li>
+  <li><a href="contato.html">Contato</a></li>
 </ul>
+
 <main>
+
   <div class="page-hero container">
-    <span class="wip-badge">Em construção</span>
+    <p class="section-label">Cinco campos, uma convergência</p>
     <h1>A Ciência</h1>
-    <p class="lead">Os pesquisadores que documentaram o que o corpo carrega. Décadas de pesquisa em neurociência, psicologia somática e interocepção convergindo para a mesma descoberta.</p>
-    <a href="index.html" class="btn btn-outline" style="margin-top:32px;">Voltar ao início</a>
+    <p class="lead">A frase que abre este site, "seu corpo lembra de tudo que você tentou esquecer", não nasceu de um único pesquisador. Ela emerge do encontro de cinco campos de investigação que, por caminhos completamente distintos, chegaram ao mesmo ponto.</p>
   </div>
+
+  <div class="container" style="padding-bottom: 80px;">
+    <article class="article-body">
+
+      <p>O corpo não é um recipiente passivo das emoções. Ele participa, registra e, quando não encontra saída, retém. Abaixo, cada pesquisador aparece com o que efetivamente descobriu e com o lugar que ocupa neste mapa: quem viu o fenômeno primeiro, quem o confirmou com tecnologia, quem explicou o mecanismo, quem mostrou o caminho de saída e quem trouxe a evidência mais recente.</p>
+
+      <p>Nenhum deles criou essa ideia sozinho. Cada um a encontrou, com suas próprias ferramentas, em seu próprio tempo.</p>
+
+      <h3>Wilhelm Reich <span style="font-family: var(--font-body); font-weight: 400; font-size: 0.85rem; color: var(--text-faint);">— o pioneiro clínico</span></h3>
+      <span class="researcher-years">1897–1957</span>
+
+      <p>Reich foi o primeiro a propor, de forma sistemática, que emoções reprimidas não desaparecem: elas se instalam no corpo como tensão muscular crônica. Chamou esse fenômeno de couraça muscular e descreveu sete segmentos de tensão distribuídos ao longo do corpo, do olhar até a pelve, cada um capaz de reter um tipo específico de conteúdo emocional retido. Diferente da psicanálise de sua época, que trabalhava quase exclusivamente pela palavra, Reich passou a intervir diretamente na respiração e no movimento do corpo, entendendo que era ali, e não apenas no discurso, que a defesa emocional se sustentava.</p>
+
+      <p>Reich não tinha, à época, os instrumentos para comprovar sua observação com neuroimagem ou dados fisiológicos mensuráveis. Ele viu o fenômeno clinicamente, décadas antes de existir tecnologia para confirmá-lo.</p>
+
+      <div class="corpo-bloco">
+        <p><strong>Pioneiro clínico:</strong> intuiu e descreveu com precisão algo que a ciência levaria mais de meio século para verificar por outros meios. O aprofundamento sobre a couraça muscular, os sete segmentos e a vegetoterapia está na ficha dedicada a Reich, com o contexto histórico de Viena e do exílio.</p>
+      </div>
+
+      <h3>Bessel van der Kolk <span style="font-family: var(--font-body); font-weight: 400; font-size: 0.85rem; color: var(--text-faint);">— o confirmador científico moderno</span></h3>
+      <span class="researcher-years">1943–</span>
+
+      <p>Psiquiatra americano que dedicou décadas a estudar trauma com o apoio de neuroimagem, Van der Kolk demonstrou algo que mudou o campo: experiências traumáticas não ficam armazenadas apenas como memória narrativa, algo que se conta. Elas permanecem como estados fisiológicos ativos no sistema nervoso, prontos para serem reativados mesmo quando a pessoa já não consegue, ou não quer, lembrar conscientemente do que viveu.</p>
+
+      <p>O título do seu livro mais conhecido, "O Corpo Guarda as Marcas" (2014), tornou-se a expressão mais reconhecida da ideia central deste site, e é frequentemente o primeiro ponto de contato de quem chega a este campo pela primeira vez. Van der Kolk é, neste mapa, quem trouxe instrumentação científica moderna para confirmar em laboratório o que Reich já havia observado clinicamente décadas antes.</p>
+
+      <h3>Stephen Porges <span style="font-family: var(--font-body); font-weight: 400; font-size: 0.85rem; color: var(--text-faint);">— o arquiteto do mecanismo</span></h3>
+      <span class="researcher-years">1945–</span>
+
+      <p>Neurocientista americano, Porges desenvolveu a Teoria Polivagal, publicada em 1994 e continuamente expandida desde então. Seu trabalho mapeou como o sistema nervoso autônomo regula os estados de segurança, perigo e ameaça de vida, e como esses estados afetam diretamente a capacidade de conexão social, o ritmo da respiração e a expressão emocional.</p>
+
+      <p>É a Porges que se deve a explicação neurológica para uma pergunta muito concreta: por que o corpo trava diante do medo? A resposta não é fraqueza psicológica nem falta de controle, é o nervo vago em ação, uma resposta automática e involuntária do sistema nervoso.</p>
+
+      <div class="pergunta-reflexao">
+        Enquanto Reich descreveu o fenômeno e Van der Kolk o confirmou, Porges explica o como: o mecanismo neurológico por trás daquilo que os outros dois documentaram.
+      </div>
+
+      <h3>Peter Levine <span style="font-family: var(--font-body); font-weight: 400; font-size: 0.85rem; color: var(--text-faint);">— o terapeuta do processo</span></h3>
+      <span class="researcher-years">1942–</span>
+
+      <p>Psicólogo americano, Levine criou a Somatic Experiencing a partir de uma observação simples, feita ao estudar animais na natureza: diante de uma ameaça, eles tremem, sacodem o corpo e, assim, completam a resposta de estresse antes de voltar ao equilíbrio. Seres humanos, por pressão social e cultural, frequentemente interrompem esse ciclo. Engolem o tremor, contêm a reação, seguem em frente como se nada tivesse acontecido.</p>
+
+      <p>O resultado, segundo Levine, é energia de defesa que fica presa no sistema nervoso, sem nunca ter sido descarregada. A partir dessa observação, ele desenvolveu um método clínico voltado a ajudar o corpo a completar essas respostas interrompidas. Se Reich, Van der Kolk e Porges descrevem o problema e seu mecanismo, Levine é quem aponta um caminho de saída a partir do mesmo princípio biológico.</p>
+
+      <h3>Audrey van der Meer <span style="font-family: var(--font-body); font-weight: 400; font-size: 0.85rem; color: var(--text-faint);">— a confirmação mais recente</span></h3>
+      <span class="researcher-years">1966–</span>
+
+      <p>Neurocientista norueguesa, Van der Meer estuda desenvolvimento cerebral e neurociência ecológica na NTNU. Usando eletroencefalografia de alta densidade, com 256 eletrodos, demonstrou que escrever à mão ativa redes neurais muito mais amplas do que digitar, justamente porque envolve pressão, visão e som integrados ao movimento do corpo.</p>
+
+      <p>Sua pesquisa com bebês mostrou algo igualmente relevante para este mapa: movimento e desenvolvimento cerebral são inseparáveis. O corpo não espera o cérebro estar pronto para então aprender, os dois se formam juntos, num único processo. Em 2026, Van der Meer publicou "Developmental Ecological Neuroscience", que sintetiza décadas de pesquisa num princípio central: o cérebro aprende quando o corpo explora.</p>
+
+      <div class="corpo-bloco">
+        <p><strong>A confirmação mais recente:</strong> com o rigor tecnológico mais sofisticado deste mapa, Van der Meer chega, por outro caminho ainda, à mesma constatação: movimento e cognição formam um único sistema, não duas coisas separadas.</p>
+      </div>
+
+      <h3>Interocepção <span style="font-family: var(--font-body); font-weight: 400; font-size: 0.85rem; color: var(--text-faint);">— o campo que une tudo</span></h3>
+
+      <p>Diferente dos cinco nomes anteriores, a interocepção não pertence a uma única pessoa. É um campo científico consolidado, que se define como a capacidade do sistema nervoso de captar, interpretar e integrar sinais que vêm de dentro do próprio corpo: batimentos cardíacos, ritmo da respiração, tensão muscular, estados viscerais.</p>
+
+      <p>A interocepção é considerada, hoje, a base da inteligência emocional. Antes mesmo de conseguir nomear uma emoção, o cérebro já recebeu e processou sinais do corpo, é esse processamento que, em seguida, se traduz em sentimento. Pesquisas do Weizmann Institute, publicadas em 2026, demonstraram que esses sinais subconscientes podem ascender à consciência com prática, ou seja, escutar o próprio corpo não é um dom raro, é uma habilidade que pode ser desenvolvida.</p>
+
+      <p>Neste site, a interocepção é o campo que explica como a comunicação entre corpo e cérebro efetivamente funciona, e como cada pessoa pode se tornar mais consciente dela ao longo do tempo.</p>
+
+      <!-- Fechamento e link cruzado -->
+      <div class="pesquisadores-strip">
+        <h3>O que esse mapa mostra</h3>
+        <p>Nenhum desses cinco campos foi criado isoladamente com a intenção de provar os outros. Cada um chegou, com suas próprias ferramentas e em seu próprio tempo, a uma versão da mesma constatação: o corpo não é neutro diante do que vivemos. Ele responde, se adapta e, quando não encontra saída, retém.</p>
+        <p>É essa convergência, e não a autoridade de um único nome, que sustenta a afirmação que abre este site.</p>
+        <a href="caminhos.html" class="btn btn-primary" style="margin-top: 20px; display: inline-block;">Existe caminho para mudar?</a>
+        <a href="o-corpo-que-guarda.html" class="btn btn-outline" style="margin-top: 20px; margin-left: 12px; display: inline-block;">Rever o mecanismo</a>
+      </div>
+
+    </article>
+
+    <div class="disclaimer" style="margin-top: 48px;">
+      Este conteúdo tem finalidade exclusivamente informativa e educacional. Não substitui acompanhamento psicoterápico, médico ou qualquer outro tipo de cuidado profissional.
+    </div>
+  </div>
+
 </main>
+
 <footer class="footer">
   <div class="container-lg">
     <div class="footer-inner">
@@ -64,8 +226,8 @@
       <div class="footer-col">
         <h4>Mais</h4>
         <ul>
-          <li><a href="blog/index.html">Artigos</a></li>
-          <li><a href="esta-em-crise.html">Está em crise?</a></li>
+          <li><a href="blog/index.html">Blog</a></li>
+          <li><a href="contato.html">Contato</a></li>
         </ul>
       </div>
     </div>
@@ -75,6 +237,7 @@
     </div>
   </div>
 </footer>
+
 <script src="js/main.js"></script>
 </body>
 </html>
