@@ -58,8 +58,6 @@
     }
 
     .artigo-tag {
-      position: relative;
-      cursor: pointer;
       background: var(--bg-alt);
       color: var(--sage);
       font-size: 0.75rem;
@@ -67,28 +65,6 @@
       border-radius: 20px;
       border: 1px solid var(--border);
       font-style: italic;
-    }
-
-    .tag-popup {
-      display: none;
-      position: absolute;
-      top: calc(100% + 10px);
-      left: 0;
-      z-index: 20;
-      width: 220px;
-      background: var(--text);
-      color: rgba(255,255,255,0.92);
-      font-size: 0.85rem;
-      font-style: normal;
-      line-height: 1.5;
-      padding: 14px 16px;
-      border-radius: 2px;
-      box-shadow: var(--shadow);
-    }
-    .artigo-tag.tag-open .tag-popup { display: block; }
-
-    @media (max-width: 860px) {
-      .tag-popup { width: 200px; }
     }
 
     .nav-artigos {
@@ -117,7 +93,7 @@
       <li><a href="../caminhos.html">Caminhos</a></li>
       <li><a href="../jornada.html">Minha Jornada</a></li>
       <li><a href="index.html">Blog</a></li>
-      <li><a href="../esta-em-crise.html">Está em Crise?</a></li>
+      <li><a href="../esta-em-crise.html">Contato</a></li>
     </ul>
     <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -132,7 +108,7 @@
   <li><a href="../caminhos.html">Caminhos</a></li>
   <li><a href="../jornada.html">Minha Jornada</a></li>
   <li><a href="index.html">Blog</a></li>
-  <li><a href="../esta-em-crise.html">Está em Crise?</a></li>
+  <li><a href="../esta-em-crise.html">Contato</a></li>
 </ul>
 
 <main>
@@ -145,16 +121,10 @@
 
   <div class="container" style="padding-bottom: 80px;">
 
-    <div class="artigo-meta" id="artigoTags">
-      <span class="artigo-tag">Neurociência
-        <span class="tag-popup">O estudo científico do desenvolvimento cerebral, aqui aplicado à relação entre movimento e cognição desde os primeiros meses de vida.</span>
-      </span>
-      <span class="artigo-tag">Movimento e cérebro
-        <span class="tag-popup">A ideia central de Van der Meer: o cérebro não espera o corpo estar pronto para aprender, os dois se formam juntos, num único processo.</span>
-      </span>
-      <span class="artigo-tag">Memória corporal
-        <span class="tag-popup">Como a experiência de mover o corpo, e não só de pensar, deixa marcas mensuráveis no funcionamento cerebral.</span>
-      </span>
+    <div class="artigo-meta">
+      <span class="artigo-tag">Neurociência</span>
+      <span class="artigo-tag">Movimento e cérebro</span>
+      <span class="artigo-tag">Memória corporal</span>
     </div>
 
     <article class="artigo-body">
@@ -230,7 +200,6 @@
       <div>
         <a href="../index.html" class="footer-brand">Corpo<span>Vivo</span></a>
         <p class="footer-desc">O corpo registra, carrega e pode ajudar a liberar o que vivemos.</p>
-        <p class="footer-desc" style="margin-top:12px;">Contato: <a href="mailto:vera.rosendo@gmail.com">vera.rosendo@gmail.com</a></p>
       </div>
       <div class="footer-col">
         <h4>Conteúdo</h4>
@@ -245,35 +214,17 @@
         <h4>Mais</h4>
         <ul>
           <li><a href="index.html">Blog</a></li>
-          <li><a href="../esta-em-crise.html">Está em Crise?</a></li>
+          <li><a href="../esta-em-crise.html">Contato</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p style="color: rgba(255,255,255,0.85);"><em>© 2026 Vera Rosendo.</em> Conteúdo educativo.</p>
-      <p style="margin-top:10px; color: rgba(255,255,255,0.55);">Produção, revisão e edição: Vera Rosendo · Pesquisa, redação e desenvolvimento técnico: Claude (IA).</p>
+      <p>Nenhuma informação aqui substitui acompanhamento profissional.</p>
+      <p style="margin-top:10px; opacity:0.5;">Produção e Design: Vera Rosendo · Desenvolvimento técnico: Claude (AI)</p>
     </div>
   </div>
 </footer>
 
 <script src="../js/main.js"></script>
-<script>
-  (function () {
-    var tags = document.querySelectorAll('#artigoTags .artigo-tag');
-    tags.forEach(function (tag) {
-      tag.addEventListener('mouseenter', function () { tag.classList.add('tag-open'); });
-      tag.addEventListener('mouseleave', function () { tag.classList.remove('tag-open'); });
-      tag.addEventListener('click', function (e) {
-        var estavaAberto = tag.classList.contains('tag-open');
-        tags.forEach(function (t) { t.classList.remove('tag-open'); });
-        if (!estavaAberto) tag.classList.add('tag-open');
-        e.stopPropagation();
-      });
-    });
-    document.addEventListener('click', function () {
-      tags.forEach(function (t) { t.classList.remove('tag-open'); });
-    });
-  })();
-</script>
 </body>
 </html>
