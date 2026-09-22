@@ -5,300 +5,59 @@
   <link rel="icon" type="image/png" href="favicon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>As Couraças — Corpo Vivo</title>
-  <meta name="description" content="A couraça em Wilhelm Reich: da couraça do caráter à couraça muscular, os sete segmentos de tensão do corpo, e o que a ciência contemporânea sustenta sobre essa teoria.">
-  <meta name="keywords" content="couraça muscular Reich, sete segmentos, segmento ocular, segmento oral, segmento diafragmático, segmento pélvico, vegetoterapia, Análise do Caráter">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,900;1,400;1,600&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  <style>
-    .article-body h3 {
-      font-family: var(--font-display);
-      font-size: 1.35rem;
-      font-weight: 600;
-      color: var(--warm);
-      margin: 52px 0 4px;
-      padding-top: 52px;
-      border-top: 1px solid var(--border);
-    }
-    .article-body h3:first-of-type { margin-top: 40px; padding-top: 40px; }
-    .article-body p { margin-bottom: 20px; max-width: 70ch; }
-    .article-body p:last-child { margin-bottom: 0; }
-
-    .fonte-bloco {
-      background: var(--bg-alt);
-      border-left: 3px solid var(--sage);
-      padding: 20px 24px;
-      margin: 28px 0;
-      font-size: 0.88rem;
-      color: var(--text-soft);
-      font-style: italic;
-      max-width: 66ch;
-    }
-
-    .corpo-bloco {
-      background: var(--bg-alt);
-      border-left: 3px solid var(--sage);
-      padding: 28px 32px;
-      margin: 32px 0;
-      max-width: 66ch;
-    }
-    .corpo-bloco p { font-size: 0.97rem; color: var(--text-soft); margin-bottom: 10px; max-width: 100%; }
-    .corpo-bloco p:last-child { margin-bottom: 0; }
-    .corpo-bloco strong { color: var(--text); }
-
-    .pergunta-reflexao {
-      font-family: var(--font-display);
-      font-size: 1.1rem;
-      font-style: italic;
-      color: var(--text-soft);
-      border-left: 3px solid var(--accent);
-      padding-left: 24px;
-      margin: 40px 0 32px;
-      max-width: 58ch;
-      line-height: 1.6;
-    }
-
-    /* Mapa dos segmentos: mesmo padrão de A Ciência, em coluna, de cima para baixo */
-    .mapa-segmentos {
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
-      margin: 36px 0 44px;
-      border-top: 1px solid var(--border);
-    }
-    .segmento-passo {
-      position: relative;
-      cursor: pointer;
-      padding: 14px 4px;
-      border-bottom: 1px solid var(--border);
-      display: flex;
-      align-items: baseline;
-      gap: 16px;
-    }
-    .segmento-num {
-      font-family: var(--font-display);
-      font-size: 0.85rem;
-      color: var(--text-faint);
-      width: 20px;
-      flex-shrink: 0;
-    }
-    .segmento-nome {
-      font-family: var(--font-display);
-      font-size: 1.05rem;
-      font-weight: 600;
-      color: var(--text);
-    }
-    .segmento-regiao {
-      font-size: 0.85rem;
-      color: var(--text-faint);
-      font-style: italic;
-    }
-    .segmento-passo:hover .segmento-nome { color: var(--sage); }
-    .segmento-popup {
-      display: none;
-      position: absolute;
-      top: calc(100% + 6px);
-      left: 36px;
-      z-index: 20;
-      width: 300px;
-      max-width: calc(100% - 40px);
-      background: var(--text);
-      color: rgba(255,255,255,0.92);
-      font-size: 0.88rem;
-      font-style: normal;
-      line-height: 1.55;
-      padding: 16px 18px;
-      border-radius: 2px;
-      box-shadow: var(--shadow);
-    }
-    .segmento-popup strong { color: var(--sage); }
-    .segmento-passo.seg-open .segmento-popup { display: block; }
-
-    .pesquisadores-strip {
-      background: var(--bg-vera);
-      padding: 32px 40px;
-      margin-top: 56px;
-    }
-    .pesquisadores-strip h3 {
-      border-top: none; padding-top: 0; margin-top: 0; margin-bottom: 16px; font-size: 1.2rem;
-    }
-    .pesquisadores-strip p { font-size: 0.97rem; color: var(--text-soft); margin-bottom: 12px; }
-
-    @media (max-width: 860px) {
-      .pesquisadores-strip { padding: 24px; }
-      .segmento-popup { width: 240px; left: 0; }
-    }
-  </style>
 </head>
 <body>
-
 <nav class="nav">
   <div class="nav-inner">
     <a href="index.html" class="nav-brand">Corpo<span>Vivo</span></a>
-    <ul class="nav-links">
+        <ul class="nav-links">
       <li><a href="index.html">Início</a></li>
       <li><a href="o-corpo-que-guarda.html">O Corpo que Guarda</a></li>
       <li><a href="a-ciencia.html">A Ciência</a></li>
       <li><a href="caminhos.html">Caminhos</a></li>
       <li><a href="jornada.html">Minha Jornada</a></li>
       <li><a href="blog/index.html">Blog</a></li>
-      <li><a href="esta-em-crise.html">Está em Crise?</a></li>
+      <li><a href="esta-em-crise.html">Contato</a></li>
     </ul>
     <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </div>
 </nav>
-
-<ul class="nav-mobile">
+<ul class="nav-mobile" aria-label="Menu mobile">
   <li><a href="index.html">Início</a></li>
   <li><a href="o-corpo-que-guarda.html">O Corpo que Guarda</a></li>
   <li><a href="a-ciencia.html">A Ciência</a></li>
   <li><a href="caminhos.html">Caminhos</a></li>
   <li><a href="jornada.html">Minha Jornada</a></li>
   <li><a href="blog/index.html">Blog</a></li>
-  <li><a href="esta-em-crise.html">Está em Crise?</a></li>
+  <li><a href="esta-em-crise.html">Contato</a></li>
 </ul>
-
 <main>
-
   <div class="page-hero container">
-    <p class="section-label">Wilhelm Reich</p>
+    <span class="wip-badge">Em construção</span>
     <h1>As Couraças</h1>
-    <p class="lead">Quando uma defesa que um dia protegeu se torna permanente, ela deixa de responder à situação que a criou e passa a fazer parte de como o corpo está no mundo.</p>
+    <p class="lead">Esta página está sendo preparada com cuidado. Volte em breve.</p>
+    <a href="index.html" class="btn btn-outline" style="margin-top: 32px;">Voltar ao início</a>
   </div>
-
-  <div class="container" style="padding-bottom: 80px;">
-    <article class="article-body">
-
-      <p>Wilhelm Reich (1897–1957) desenvolveu, ao longo de sua trajetória na psicanálise e depois na psicoterapia corporal, uma compreensão particular da relação entre os processos psíquicos e o corpo. Um dos conceitos centrais dessa construção foi o de <strong>couraça</strong>, o <em>Panzer</em> de seus textos em alemão. Ela não nasceu como um conceito corporal. Dizia respeito, inicialmente, às formas de defesa que a pessoa desenvolve diante de conflitos, angústias e exigências do mundo externo. Progressivamente, Reich passou a observar que essas defesas também ganhavam expressão no corpo, sobretudo como tensão e contração muscular crônica.</p>
-
-      <h3>Couraça do caráter e couraça muscular</h3>
-
-      <p>Na análise do caráter, Reich observava não apenas o que uma pessoa dizia, mas como ela se comportava durante o processo: a maneira de falar, de se movimentar, de reagir. Passou a compreender essas atitudes como manifestações de uma estrutura defensiva, a couraça do caráter, que protege tanto de estímulos do mundo externo quanto de impulsos e sentimentos que, em algum momento da história da pessoa, eram difíceis demais de suportar.</p>
-
-      <p>Com o avanço do trabalho, Reich passou a observar que essa mesma defesa também podia estar presente no corpo. A tensão muscular crônica passou a ser compreendida como a expressão corporal de um processo defensivo, o que ele chamou de identidade funcional entre a atitude caracterológica e a atitude muscular: as duas desempenham uma função semelhante no mecanismo de defesa da pessoa.</p>
-
-      <div class="corpo-bloco">
-        <p><strong>A couraça não é o corpo "fazendo errado".</strong> Em determinado momento, uma contração, uma respiração contida ou uma mudança de postura podem funcionar como proteção legítima. O problema surge quando essa defesa se torna crônica e relativamente independente da situação que a originou, quando a pessoa deixa de contrair o corpo diante de uma ameaça específica e passa a manter aquela contração como parte habitual de estar no mundo.</p>
-      </div>
-
-      <h3>A couraça muscular e a respiração</h3>
-
-      <p>A partir de observações clínicas, Reich passou a trabalhar diretamente com o corpo. Uma pessoa poderia prender a respiração diante do medo, contrair a mandíbula para conter uma expressão, restringir movimentos diante de uma emoção intensa. Quando esses padrões se tornam habituais, constituem o que ele chamou de couraça muscular. A respiração ocupa lugar central nessa teoria: medo, ansiedade, choro e raiva alteram o ritmo e a profundidade da respiração, e a restrição respiratória participa, para Reich, do próprio processo de conter a emoção.</p>
-
-      <p>É importante situar o alcance dessa ideia. A relação entre emoções, estresse, sistema nervoso, respiração e tensão muscular tem bases reconhecidas pela ciência contemporânea, mas isso não confirma a explicação reichiana por completo, sobretudo suas concepções posteriores de energia e "orgone", que pertencem ao sistema teórico do próprio Reich e não são conceitos estabelecidos pela fisiologia. Uma revisão sistemática recente sobre psicoterapia corporal encontrou efeitos moderados para desfechos psicológicos, mas também heterogeneidade entre as intervenções estudadas e necessidade de pesquisas maiores e mais robustas.</p>
-
-      <div class="fonte-bloco">
-        Rosendahl, S., Sattel, H., &amp; Lahmann, C. (2021). Effectiveness of Body Psychotherapy: A Systematic Review and Meta-Analysis. <em>Frontiers in Psychiatry</em>, 12, 709798.
-      </div>
-
-      <h3>Os sete segmentos</h3>
-
-      <p>Em sua formulação posterior, sistematizada em <em>Análise do Caráter</em>, Reich descreveu a couraça muscular organizada em sete segmentos horizontais, como anéis que circundam o corpo. Não são divisões anatômicas convencionais: cada segmento reúne grupos musculares que, clinicamente, participam de uma mesma função de expressão e contenção emocional. Passe o mouse (ou toque) em cada um:</p>
-
-      <div class="mapa-segmentos" id="mapaSegmentos">
-        <div class="segmento-passo" data-idx="0">
-          <span class="segmento-num">01</span>
-          <span class="segmento-nome">Ocular</span>
-          <span class="segmento-regiao">olhos, testa, região occipital</span>
-          <div class="segmento-popup"><strong>Contém:</strong> medo profundo, desconfiança. Sinal clássico: olhar fixo ou vazio, dificuldade de chorar.</div>
-        </div>
-        <div class="segmento-passo" data-idx="1">
-          <span class="segmento-num">02</span>
-          <span class="segmento-nome">Oral</span>
-          <span class="segmento-regiao">boca, queixo, garganta</span>
-          <div class="segmento-popup"><strong>Contém:</strong> raiva oral, choro, dependência. Sinal clássico: maxilar travado, voz monótona.</div>
-        </div>
-        <div class="segmento-passo" data-idx="2">
-          <span class="segmento-num">03</span>
-          <span class="segmento-nome">Cervical</span>
-          <span class="segmento-regiao">pescoço, nuca, base da língua</span>
-          <div class="segmento-popup"><strong>Contém:</strong> raiva engolida, choro sufocado. Sinal clássico: nó na garganta, pescoço rígido.</div>
-        </div>
-        <div class="segmento-passo" data-idx="3">
-          <span class="segmento-num">04</span>
-          <span class="segmento-nome">Torácico</span>
-          <span class="segmento-regiao">peito, ombros, braços, mãos</span>
-          <div class="segmento-popup"><strong>Contém:</strong> saudade, amor contido, raiva destrutiva. Sinal clássico: respiração superficial, incapacidade de se entregar num abraço.</div>
-        </div>
-        <div class="segmento-passo" data-idx="4">
-          <span class="segmento-num">05</span>
-          <span class="segmento-nome">Diafragmático</span>
-          <span class="segmento-regiao">diafragma, plexo solar, base das costelas</span>
-          <div class="segmento-popup"><strong>Contém:</strong> raiva intensa, medo visceral. Sinal clássico: respiração que não desce ao abdômen, "borboletas no estômago" crônicas.</div>
-        </div>
-        <div class="segmento-passo" data-idx="5">
-          <span class="segmento-num">06</span>
-          <span class="segmento-nome">Abdominal</span>
-          <span class="segmento-regiao">abdômen, flancos, lombar</span>
-          <div class="segmento-popup"><strong>Contém:</strong> medo de invasão, vulnerabilidade. Sinal clássico: abdômen duro e retraído, lombalgia recorrente.</div>
-        </div>
-        <div class="segmento-passo" data-idx="6">
-          <span class="segmento-num">07</span>
-          <span class="segmento-nome">Pélvico</span>
-          <span class="segmento-regiao">pelve, glúteos, pernas</span>
-          <div class="segmento-popup"><strong>Contém:</strong> prazer, sexualidade, medo da entrega. Sinal clássico: pelve sem movimento, pernas rígidas.</div>
-        </div>
-      </div>
-
-      <p>A descrição de "sinal clássico" acima resume a sistematização tradicional reichiana, consolidada por praticantes ao longo de décadas, não achados de estudos controlados sobre sinais físicos específicos.</p>
-
-      <div class="pergunta-reflexao">
-        O trabalho terapêutico segue sempre a mesma direção: do olhar à pelve, nunca ao contrário. Os segmentos superiores regulam a intensidade do que está abaixo, são o olho que vê, a boca que nomeia, a garganta que grita. Liberar a pelve antes dos olhos pode inundar a pessoa com sensações que ela não tem recursos para integrar.
-      </div>
-
-      <h3>O trabalho sobre a couraça</h3>
-
-      <p>O trabalho corporal desenvolvido por Reich não consistia em simplesmente "relaxar os músculos". Ele observava a relação entre postura, tensão muscular, respiração, expressão emocional, resistência e caráter. Modificar uma atitude corporal podia fazer emergir sensações ou afetos contidos, assim como a tomada de consciência de um conflito psicológico podia modificar a expressão corporal. É essa relação circular entre corpo e experiência psíquica que marca sua abordagem, e que ele batizou de vegetoterapia.</p>
-
-      <div class="fonte-bloco">
-        Gilbert, P. (1999). Breathing: the legacy of Wilhelm Reich. <em>Journal of Bodywork and Movement Therapies</em>, 3(2), 97–106.
-      </div>
-
-      <h3>Dois níveis de leitura</h3>
-
-      <p>É possível estudar a couraça em dois níveis diferentes. Como história das ideias: o que Reich observou, o que propôs, como desenvolveu sua teoria. Nesse sentido, é um conceito histórico central na psicoterapia corporal, que influenciou abordagens posteriores, como as apresentadas em <a href="caminhos.html">Caminhos</a>. Como ciência contemporânea: quais dessas proposições a pesquisa atual sustenta. Aqui é preciso cuidado. A relação entre emoções, estresse, atividade autonômica e tensão muscular tem base científica reconhecida, isso não significa que toda a explicação de Reich tenha sido confirmada.</p>
-
-      <div class="pesquisadores-strip">
-        <h3>Como manter essa distinção clara</h3>
-        <p>Observação clínica de Reich → interpretação teórica de Reich → desenvolvimento posterior das psicoterapias corporais → evidências científicas contemporâneas. Uma defesa psicológica pode adquirir uma expressão corporal habitual, essa é a ideia central. Compreender essa expressão pode ajudar a compreender a própria história emocional, mas o quanto isso explica, e como, é uma pergunta que a ciência de hoje ainda está respondendo aos poucos.</p>
-        <a href="a-ciencia.html" class="btn btn-outline" style="margin-top: 20px; display: inline-block;">Ver o mapa científico completo</a>
-        <a href="o-corpo-que-guarda.html" class="btn btn-outline" style="margin-top: 20px; margin-left: 12px; display: inline-block;">Rever o mecanismo</a>
-      </div>
-
-      <div class="fonte-bloco" style="margin-top: 40px;">
-        Reich, W. (1933). <em>Charakteranalyse</em>. (Ed. brasileira: <em>Análise do Caráter</em>. São Paulo: Martins Fontes, 1995.)
-        <br><br>
-        Reich, W. (1942). <em>The Function of the Orgasm: Sex-Economic Problems of Biological Energy</em>. New York: Noonday Press.
-        <br><br>
-        Almeida, B. P., &amp; Albertini, P. (2014). A noção de couraça na obra de Wilhelm Reich: publicações de 1920 a 1933. <em>Psicologia USP</em>, 25(2), 134–143.
-      </div>
-
-    </article>
-
-    <div class="disclaimer" style="margin-top: 48px;">
-      Este conteúdo tem finalidade exclusivamente informativa e educacional. Não substitui acompanhamento psicoterápico, médico ou qualquer outro tipo de cuidado profissional.
-    </div>
-  </div>
-
 </main>
-
 <footer class="footer">
   <div class="container-lg">
     <div class="footer-inner">
       <div>
         <a href="index.html" class="footer-brand">Corpo<span>Vivo</span></a>
-        <p class="footer-desc">O corpo registra, carrega e pode ajudar a liberar o que vivemos.</p>
-        <p class="footer-desc" style="margin-top:12px;">Contato: <a href="mailto:vera.rosendo@gmail.com">vera.rosendo@gmail.com</a></p>
+        <p class="footer-desc">Informação sobre couraças musculares, a obra de Wilhelm Reich e a Jornada do Corpo.</p>
       </div>
       <div class="footer-col">
         <h4>Conteúdo</h4>
         <ul>
-          <li><a href="o-corpo-que-guarda.html">O Corpo que Guarda</a></li>
-          <li><a href="a-ciencia.html">A Ciência</a></li>
-          <li><a href="caminhos.html">Caminhos</a></li>
+          <li><a href="reich.html">Wilhelm Reich</a></li>
+          <li><a href="couracas.html">As Couraças</a></li>
+          <li><a href="bhakti.html">Jornada do Corpo</a></li>
           <li><a href="jornada.html">Minha Jornada</a></li>
         </ul>
       </div>
@@ -306,35 +65,18 @@
         <h4>Mais</h4>
         <ul>
           <li><a href="blog/index.html">Blog</a></li>
-          <li><a href="esta-em-crise.html">Está em Crise?</a></li>
+          <li><a href="recursos.html">Recursos</a></li>
+          <li><a href="esta-em-crise.html">Contato</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p style="color: rgba(255,255,255,0.85);"><em>© 2026 Vera Rosendo.</em> Conteúdo educativo.</p>
-      <p style="margin-top:10px; color: rgba(255,255,255,0.55);">Produção, revisão e edição: Vera Rosendo · Pesquisa, redação e desenvolvimento técnico: Claude (IA).</p>
+      <p>Conteúdo produzido com cuidado e responsabilidade. Nenhuma informação aqui substitui acompanhamento profissional.</p>
+    
+      <p style="margin-top:10px; opacity:0.5;">Produção e Design: Vera Rosendo · Desenvolvimento técnico: Claude (AI)</p>
     </div>
   </div>
 </footer>
-
 <script src="js/main.js"></script>
-<script>
-  (function () {
-    var passos = document.querySelectorAll('#mapaSegmentos .segmento-passo');
-    passos.forEach(function (passo) {
-      passo.addEventListener('mouseenter', function () { passo.classList.add('seg-open'); });
-      passo.addEventListener('mouseleave', function () { passo.classList.remove('seg-open'); });
-      passo.addEventListener('click', function (e) {
-        var estavaAberto = passo.classList.contains('seg-open');
-        passos.forEach(function (p) { p.classList.remove('seg-open'); });
-        if (!estavaAberto) passo.classList.add('seg-open');
-        e.stopPropagation();
-      });
-    });
-    document.addEventListener('click', function () {
-      passos.forEach(function (p) { p.classList.remove('seg-open'); });
-    });
-  })();
-</script>
 </body>
 </html>

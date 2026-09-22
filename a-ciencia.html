@@ -5,162 +5,12 @@
   <link rel="icon" type="image/png" href="favicon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>A Ciência — Corpo Vivo</title>
-  <meta name="description" content="Cinco campos de pesquisa, décadas diferentes, um mesmo ponto de chegada: o corpo registra o que vivemos. Conheça Reich, Van der Kolk, Porges, Levine, Van der Meer e a interocepção.">
-  <meta name="keywords" content="wilhelm reich couraça muscular, bessel van der kolk corpo guarda as marcas, stephen porges teoria polivagal, peter levine somatic experiencing, audrey van der meer neurociência, interocepção">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,900;1,400;1,600&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  <style>
-    .article-body h3 {
-      font-family: var(--font-display);
-      font-size: 1.35rem;
-      font-weight: 600;
-      color: var(--warm);
-      margin: 52px 0 4px;
-      padding-top: 52px;
-      border-top: 1px solid var(--border);
-    }
-    .article-body h3:first-of-type {
-      margin-top: 40px;
-      padding-top: 40px;
-    }
-    .researcher-years {
-      display: block;
-      font-size: 0.85rem;
-      font-style: italic;
-      color: var(--text-faint);
-      margin-bottom: 20px;
-    }
-    .article-body p {
-      margin-bottom: 20px;
-      max-width: 70ch;
-    }
-    .article-body p:last-child { margin-bottom: 0; }
-
-    .fonte-bloco {
-      background: var(--bg-alt);
-      border-left: 3px solid var(--sage);
-      padding: 20px 24px;
-      margin: 28px 0;
-      font-size: 0.88rem;
-      color: var(--text-soft);
-      font-style: italic;
-      max-width: 66ch;
-    }
-
-    .corpo-bloco {
-      background: var(--bg-alt);
-      border-left: 3px solid var(--sage);
-      padding: 28px 32px;
-      margin: 32px 0;
-      max-width: 66ch;
-    }
-    .corpo-bloco p {
-      font-size: 0.97rem;
-      color: var(--text-soft);
-      margin-bottom: 10px;
-      max-width: 100%;
-    }
-    .corpo-bloco p:last-child { margin-bottom: 0; }
-    .corpo-bloco strong { color: var(--text); }
-
-    .pergunta-reflexao {
-      font-family: var(--font-display);
-      font-size: 1.1rem;
-      font-style: italic;
-      color: var(--text-soft);
-      border-left: 3px solid var(--accent);
-      padding-left: 24px;
-      margin: 40px 0 32px;
-      max-width: 58ch;
-      line-height: 1.6;
-    }
-
-    .pesquisadores-strip {
-      background: var(--bg-vera);
-      padding: 32px 40px;
-      margin-top: 56px;
-    }
-    .pesquisadores-strip h3 {
-      border-top: none;
-      padding-top: 0;
-      margin-top: 0;
-      margin-bottom: 16px;
-      font-size: 1.2rem;
-    }
-    .pesquisadores-strip p {
-      font-size: 0.97rem;
-      color: var(--text-soft);
-      margin-bottom: 12px;
-    }
-
-    /* Mapa interativo (hover no desktop, toque no celular) */
-    .mapa-ciclo {
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin: 36px 0 44px;
-      padding: 20px 0;
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-    }
-    .mapa-passo {
-      position: relative;
-      cursor: pointer;
-      padding: 6px 4px;
-    }
-    .mapa-numero {
-      display: block;
-      font-size: 0.78rem;
-      color: var(--warm);
-      font-weight: 700;
-      letter-spacing: 0.02em;
-    }
-    .mapa-nome {
-      display: block;
-      font-family: var(--font-display);
-      font-size: 1rem;
-      font-weight: 600;
-      color: var(--text);
-      white-space: nowrap;
-    }
-    .mapa-seta {
-      color: var(--text-faint);
-      font-size: 1.1rem;
-      flex-shrink: 0;
-    }
-    .mapa-popup {
-      display: none;
-      position: absolute;
-      top: calc(100% + 12px);
-      left: 0;
-      z-index: 20;
-      width: 240px;
-      background: var(--text);
-      color: rgba(255,255,255,0.92);
-      font-size: 0.88rem;
-      font-style: normal;
-      line-height: 1.55;
-      padding: 16px 18px;
-      border-radius: 2px;
-      box-shadow: var(--shadow);
-    }
-    .mapa-passo.mapa-open .mapa-popup { display: block; }
-    .mapa-passo:hover .mapa-nome { color: var(--sage); }
-
-    @media (max-width: 860px) {
-      .pesquisadores-strip { padding: 24px; }
-      .mapa-ciclo { gap: 6px; }
-      .mapa-seta { display: none; }
-      .mapa-passo { width: 100%; }
-      .mapa-popup { width: 100%; left: 0; }
-    }
-  </style>
 </head>
 <body>
-
 <nav class="nav">
   <div class="nav-inner">
     <a href="index.html" class="nav-brand">Corpo<span>Vivo</span></a>
@@ -171,14 +21,13 @@
       <li><a href="caminhos.html">Caminhos</a></li>
       <li><a href="jornada.html">Minha Jornada</a></li>
       <li><a href="blog/index.html">Blog</a></li>
-      <li><a href="esta-em-crise.html">Está em Crise?</a></li>
+      <li><a href="esta-em-crise.html">Contato</a></li>
     </ul>
     <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </div>
 </nav>
-
 <ul class="nav-mobile">
   <li><a href="index.html">Início</a></li>
   <li><a href="o-corpo-que-guarda.html">O Corpo que Guarda</a></li>
@@ -186,209 +35,22 @@
   <li><a href="caminhos.html">Caminhos</a></li>
   <li><a href="jornada.html">Minha Jornada</a></li>
   <li><a href="blog/index.html">Blog</a></li>
-  <li><a href="esta-em-crise.html">Está em Crise?</a></li>
+  <li><a href="esta-em-crise.html">Contato</a></li>
 </ul>
-
 <main>
-
   <div class="page-hero container">
-    <p class="section-label">Cinco campos, uma convergência</p>
+    <span class="wip-badge">Em construção</span>
     <h1>A Ciência</h1>
-    <p class="lead">A frase que abre este site, "seu corpo lembra de tudo que você tentou esquecer", não nasceu de um único pesquisador. Ela emerge do encontro de cinco campos de investigação que, por caminhos completamente distintos, chegaram ao mesmo ponto.</p>
+    <p class="lead">Os pesquisadores que documentaram o que o corpo carrega. Décadas de pesquisa em neurociência, psicologia somática e interocepção convergindo para a mesma descoberta.</p>
+    <a href="index.html" class="btn btn-outline" style="margin-top:32px;">Voltar ao início</a>
   </div>
-
-  <div class="container" style="padding-bottom: 80px;">
-    <article class="article-body">
-
-      <p>O corpo não é um recipiente passivo das emoções. Ele participa, registra e, quando não encontra saída, retém. Abaixo, cada pesquisador aparece com o que efetivamente descobriu e com o lugar que ocupa neste mapa: quem viu o fenômeno primeiro, quem o confirmou com tecnologia, quem explicou o mecanismo, quem mostrou o caminho de saída e quem trouxe a evidência mais recente.</p>
-
-      <p>Nenhum deles criou essa ideia sozinho. Cada um a encontrou, com suas próprias ferramentas, em seu próprio tempo.</p>
-
-      <div class="mapa-ciclo" id="mapaCiclo">
-        <div class="mapa-passo" data-idx="0">
-          <span class="mapa-numero">1930s</span>
-          <span class="mapa-nome">Reich</span>
-          <div class="mapa-popup">O pioneiro clínico: viu a couraça muscular décadas antes de existir tecnologia para confirmá-la.</div>
-        </div>
-        <span class="mapa-seta">→</span>
-        <div class="mapa-passo" data-idx="1">
-          <span class="mapa-numero">1990s</span>
-          <span class="mapa-nome">Van der Kolk</span>
-          <div class="mapa-popup">O confirmador científico moderno: trouxe neuroimagem para provar em laboratório o que Reich já via na clínica.</div>
-        </div>
-        <span class="mapa-seta">→</span>
-        <div class="mapa-passo" data-idx="2">
-          <span class="mapa-numero">1994</span>
-          <span class="mapa-nome">Porges</span>
-          <div class="mapa-popup">O arquiteto do mecanismo: a Teoria Polivagal explica por que o corpo trava diante do medo.</div>
-        </div>
-        <span class="mapa-seta">→</span>
-        <div class="mapa-passo" data-idx="3">
-          <span class="mapa-numero">Somatic Exp.</span>
-          <span class="mapa-nome">Levine</span>
-          <div class="mapa-popup">O terapeuta do processo: mostra como completar respostas de estresse que ficaram interrompidas.</div>
-        </div>
-        <span class="mapa-seta">→</span>
-        <div class="mapa-passo" data-idx="4">
-          <span class="mapa-numero">2020s</span>
-          <span class="mapa-nome">Van der Meer</span>
-          <div class="mapa-popup">A confirmação mais recente: movimento e cognição formam um único sistema, não duas coisas separadas.</div>
-        </div>
-        <span class="mapa-seta">→</span>
-        <div class="mapa-passo" data-idx="5">
-          <span class="mapa-numero">Campo</span>
-          <span class="mapa-nome">Interocepção</span>
-          <div class="mapa-popup">O campo que une tudo: como o cérebro lê, a cada instante, o próprio estado do corpo.</div>
-        </div>
-      </div>
-
-      <h3>Wilhelm Reich <span style="font-family: var(--font-body); font-weight: 400; font-size: 0.85rem; color: var(--text-faint);">— o pioneiro clínico</span></h3>
-      <span class="researcher-years">1897–1957</span>
-
-      <p>Reich foi o primeiro a propor, de forma sistemática, que emoções reprimidas não desaparecem: elas se instalam no corpo como tensão muscular crônica. Chamou esse fenômeno de couraça muscular e descreveu sete segmentos de tensão distribuídos ao longo do corpo, do olhar até a pelve, cada um capaz de reter um tipo específico de conteúdo emocional retido. Diferente da psicanálise de sua época, que trabalhava quase exclusivamente pela palavra, Reich passou a intervir diretamente na respiração e no movimento do corpo, entendendo que era ali, e não apenas no discurso, que a defesa emocional se sustentava.</p>
-
-      <p>Reich não tinha, à época, os instrumentos para comprovar sua observação com neuroimagem ou dados fisiológicos mensuráveis. Ele viu o fenômeno clinicamente, décadas antes de existir tecnologia para confirmá-lo.</p>
-
-      <div class="corpo-bloco">
-        <p><strong>Pioneiro clínico:</strong> intuiu e descreveu com precisão algo que a ciência levaria mais de meio século para verificar por outros meios. O aprofundamento sobre a couraça muscular, os sete segmentos e a vegetoterapia está na ficha dedicada a Reich, com o contexto histórico de Viena e do exílio.</p>
-      </div>
-
-      <div class="fonte-bloco">
-        Reich, W. (1933). <em>Charakteranalyse</em>. (Ed. brasileira: <em>Análise do Caráter</em>. São Paulo: Martins Fontes, 1995.)
-      </div>
-
-      <h3>Bessel van der Kolk <span style="font-family: var(--font-body); font-weight: 400; font-size: 0.85rem; color: var(--text-faint);">— o confirmador científico moderno</span></h3>
-      <span class="researcher-years">1943–</span>
-
-      <p>Psiquiatra americano que dedicou décadas a estudar trauma com o apoio de neuroimagem, Van der Kolk demonstrou algo que mudou o campo: experiências traumáticas não ficam armazenadas apenas como memória narrativa, algo que se conta. Elas permanecem como estados fisiológicos ativos no sistema nervoso, prontos para serem reativados mesmo quando a pessoa já não consegue, ou não quer, lembrar conscientemente do que viveu.</p>
-
-      <p>O título do seu livro mais conhecido, "O Corpo Guarda as Marcas" (2014), tornou-se a expressão mais reconhecida da ideia central deste site, e é frequentemente o primeiro ponto de contato de quem chega a este campo pela primeira vez. Van der Kolk é, neste mapa, quem trouxe instrumentação científica moderna para confirmar em laboratório o que Reich já havia observado clinicamente décadas antes.</p>
-
-      <div class="fonte-bloco">
-        Van der Kolk, B. (2014). <em>The Body Keeps the Score: Brain, Mind, and Body in the Healing of Trauma</em>. Viking. (Ed. brasileira: <em>O Corpo Guarda as Marcas</em>. Rio de Janeiro: Sextante, 2020.)
-      </div>
-
-      <h3>Stephen Porges <span style="font-family: var(--font-body); font-weight: 400; font-size: 0.85rem; color: var(--text-faint);">— o arquiteto do mecanismo</span></h3>
-      <span class="researcher-years">1945–</span>
-
-      <p>Neurocientista americano, Porges apresentou a Teoria Polivagal em 1994, consolidando-a depois num livro que reúne décadas de pesquisa. Seu trabalho mapeou como o sistema nervoso autônomo regula os estados de segurança, perigo e ameaça de vida, e como esses estados afetam diretamente a capacidade de conexão social, o ritmo da respiração e a expressão emocional.</p>
-
-      <p>É a Porges que se deve a explicação neurológica para uma pergunta muito concreta: por que o corpo trava diante do medo? A resposta não é fraqueza psicológica nem falta de controle, é o nervo vago em ação, uma resposta automática e involuntária do sistema nervoso.</p>
-
-      <div class="pergunta-reflexao">
-        Enquanto Reich descreveu o fenômeno e Van der Kolk o confirmou, Porges explica o como: o mecanismo neurológico por trás daquilo que os outros dois documentaram.
-      </div>
-
-      <div class="fonte-bloco">
-        Porges, S. W. (1994). Apresentação original da Teoria Polivagal (Presidential Address, Society for Psychophysiological Research, Atlanta). Consolidada em: Porges, S. W. (2011). <em>The Polyvagal Theory: Neurophysiological Foundations of Emotions, Attachment, Communication, and Self-Regulation</em>. W. W. Norton &amp; Company.
-      </div>
-
-      <h3>Peter Levine <span style="font-family: var(--font-body); font-weight: 400; font-size: 0.85rem; color: var(--text-faint);">— o terapeuta do processo</span></h3>
-      <span class="researcher-years">1942–</span>
-
-      <p>Psicólogo americano, Levine criou a Somatic Experiencing a partir de uma observação simples, feita ao estudar animais na natureza: diante de uma ameaça, eles tremem, sacodem o corpo e, assim, completam a resposta de estresse antes de voltar ao equilíbrio. Seres humanos, por pressão social e cultural, frequentemente interrompem esse ciclo. Engolem o tremor, contêm a reação, seguem em frente como se nada tivesse acontecido.</p>
-
-      <p>O resultado, segundo Levine, é energia de defesa que fica presa no sistema nervoso, sem nunca ter sido descarregada. A partir dessa observação, ele desenvolveu um método clínico voltado a ajudar o corpo a completar essas respostas interrompidas. Se Reich, Van der Kolk e Porges descrevem o problema e seu mecanismo, Levine é quem aponta um caminho de saída a partir do mesmo princípio biológico.</p>
-
-      <div class="fonte-bloco">
-        Levine, P. A., &amp; Frederick, A. (1997). <em>Waking the Tiger: Healing Trauma</em>. North Atlantic Books. (Ed. brasileira: <em>O Despertar do Tigre: Curando o Trauma</em>. São Paulo: Summus Editorial, 2022.)
-      </div>
-
-      <h3>Audrey van der Meer <span style="font-family: var(--font-body); font-weight: 400; font-size: 0.85rem; color: var(--text-faint);">— a confirmação mais recente</span></h3>
-      <span class="researcher-years">1966–</span>
-
-      <p>Neurocientista norueguesa, Van der Meer estuda desenvolvimento cerebral e neurociência ecológica na NTNU. Usando eletroencefalografia de alta densidade, com 256 eletrodos, demonstrou que escrever à mão ativa redes neurais muito mais amplas do que digitar, justamente porque envolve pressão, visão e som integrados ao movimento do corpo.</p>
-
-      <p>Sua pesquisa com bebês mostrou algo igualmente relevante para este mapa: movimento e desenvolvimento cerebral são inseparáveis. Recém-nascidos costumam ser subestimados por não terem linguagem e por seus movimentos parecerem desajeitados, o que sugere um cérebro imaturo. Mas ao observar fetos ainda no útero, é possível ver movimentos complexos e individualizados dos dedos. O corpo não espera o cérebro estar pronto para então aprender, os dois se formam juntos, num único processo contínuo de exploração ativa.</p>
-
-      <p>Esse princípio, o de que a percepção é um processo vitalício e que aprendemos ao explorar ativamente o ambiente, e não apenas ao recebê-lo passivamente, é o que Van der Meer e seu marido e parceiro de pesquisa, o professor de Psicologia Cognitiva Ruud van der Weel, consolidaram em 2026 num capítulo de livro acadêmico internacional intitulado precisamente "Developmental Ecological Neuroscience" (Neurociência Ecológica do Desenvolvimento). Juntos, dirigem o Laboratório de Neurociência do Desenvolvimento da NTNU.</p>
-
-      <div class="fonte-bloco">
-        Van der Meer, A., &amp; Van der Weel, R. (2026). Developmental Ecological Neuroscience: Active exploration for increased perceptual differentiation. In T. Nonaka, M. Segundo-Ortin, V. Romero, &amp; J. B. Wagman (Eds.), <em>The Routledge International Handbook of Ecological Psychology</em>. Routledge. <a href="https://doi.org/10.4324/9781003529453" target="_blank" rel="noopener">doi.org/10.4324/9781003529453</a>
-        <br><br>
-        PUCRS Online. <em>Neurociência do Desenvolvimento</em>. Disciplina da Pós-Graduação em Psicologia do Desenvolvimento e da Aprendizagem, com Audrey van der Meer e Thiago Wendt Viola.
-      </div>
-
-      <div class="corpo-bloco">
-        <p><strong>A confirmação mais recente:</strong> com o rigor tecnológico mais sofisticado deste mapa, Van der Meer chega, por outro caminho ainda, à mesma constatação: movimento e cognição formam um único sistema, não duas coisas separadas.</p>
-      </div>
-
-      <h3>Interocepção <span style="font-family: var(--font-body); font-weight: 400; font-size: 0.85rem; color: var(--text-faint);">— o campo que une tudo</span></h3>
-
-      <p>Diferente dos cinco nomes anteriores, a interocepção não pertence a uma única pessoa. É um campo científico consolidado, que se define como a capacidade do sistema nervoso de captar, interpretar e integrar sinais que vêm de dentro do próprio corpo: batimentos cardíacos, ritmo da respiração, tensão muscular, estados viscerais.</p>
-
-      <p>O neurobiólogo A. D. (Bud) Craig é considerado o pai da neurociência moderna da interocepção. Foi ele quem mapeou, em detalhe, a via neuroanatômica que leva as informações do corpo até o córtex insular, a região onde esses sinais internos se transformam naquilo que sentimos como emoção.</p>
-
-      <p>Para Craig, a interocepção não deve ser entendida apenas como um monitoramento automático das funções corporais. O cérebro recebe continuamente informações vindas da atividade cardiovascular, respiratória, visceral, térmica e metabólica, e integra tudo isso numa representação dinâmica do estado fisiológico do próprio organismo, uma representação que participa diretamente daquilo que vivemos, conscientemente, como sentimento corporal. É por isso que medo, ansiedade, alegria ou tensão raramente são só pensamento: vêm acompanhados de coração acelerado, respiração alterada, aperto no peito, contração abdominal. O corpo não é um receptor passivo das consequências de uma emoção, seus estados fisiológicos fazem parte da própria informação a partir da qual a experiência subjetiva é construída.</p>
-
-      <p>Craig liga esse processo à homeostase, o conjunto de mecanismos pelos quais o organismo mantém condições internas compatíveis com sua sobrevivência. Quando essas informações alcançam um nível de integração associado à consciência, elas constituem o que Craig chamou, em trabalhos posteriores, de <em>homeostatic sentience</em>, uma forma de consciência sentida da própria condição do organismo. Uma ressalva importante: sua teoria não propõe que cada emoção seja causada por um padrão corporal específico e fixo. A experiência emocional resulta da interação entre os sinais do corpo, sua representação neural e o contexto e avaliação da situação, a interocepção é um componente fundamental dessa experiência, não sua única causa.</p>
-
-      <div class="corpo-bloco">
-        <p><strong>Não pensamos apenas sobre o que nos acontece, também sentimos corporalmente o que nos acontece.</strong> O "sentir" é uma dimensão em que cérebro e corpo permanecem intimamente integrados, e é essa integração que torna possível a experiência humana da emoção.</p>
-      </div>
-
-      <div class="fonte-bloco">
-        Craig, A. D. (2002). How do you feel? Interoception: the sense of the physiological condition of the body. <em>Nature Reviews Neuroscience</em>, 3(8), 655–666. DOI: 10.1038/nrn894.
-        <br><br>
-        Craig, A. D. (2003). Interoception: the sense of the physiological condition of the body. <em>Current Opinion in Neurobiology</em>, 13(4), 500–505. DOI: 10.1016/S0959-4388(03)00090-4.
-        <br><br>
-        Craig, A. D. (Bud). (2014). <em>How Do You Feel? An Interoceptive Moment with Your Neurobiological Self</em>. Princeton University Press. DOI: 10.23943/princeton/9780691156767.001.0001.
-      </div>
-
-      <p>Para o neurocientista português António Damásio, emoção e sentimento não são a mesma coisa. A emoção é a resposta do organismo, alterações cardiovasculares, respiratórias, hormonais, musculares, viscerais, desencadeada por um estímulo ou situação. O sentimento é a experiência mental dessas alterações: a forma como o cérebro representa o estado do corpo e, a partir dessa representação, produz parte da experiência consciente de sentir. Uma consequência importante dessa distinção é que o organismo pode responder emocionalmente antes que a pessoa tenha qualquer percepção consciente do que está acontecendo.</p>
-
-      <p>Vale uma ressalva, importante para manter o rigor desta página: a teoria de Damásio não afirma que tudo aquilo que o corpo retém continuará sendo sentido mesmo sem lembrança consciente do acontecimento que o causou. Essa é uma extensão que o CorpoVivo propõe a partir dela, não uma conclusão que ele próprio demonstra. O que sua teoria permite afirmar com segurança, e que já é significativo, é mais modesto: processos corporais podem influenciar a experiência subjetiva sem que a pessoa tenha acesso consciente a tudo o que contribuiu para aquele estado. Existem processos neurais e corporais que ocorrem sem lembrança autobiográfica ou explicação consciente para o que se sente.</p>
-
-      <div class="corpo-bloco">
-        <p><strong>O que Damásio demonstra:</strong> acontecimento → alterações do organismo → representação cerebral do estado corporal → sentimento consciente.</p>
-        <p><strong>A hipótese que o CorpoVivo propõe a partir daí</strong> (não uma conclusão de Damásio): se parte da experiência emocional depende da representação cerebral dos estados do organismo, então alterações corporais podem participar da experiência subjetiva mesmo quando a pessoa não consegue identificar conscientemente sua origem, algo que, para ser sustentado com mais força, também se apoia em outras linhas de pesquisa: memória implícita, aprendizagem condicionada, memória emocional, interocepção, processamento preditivo e plasticidade neural.</p>
-      </div>
-
-      <div class="fonte-bloco">
-        Damásio, A. R. (1994). <em>Descartes' Error: Emotion, Reason, and the Human Brain</em>. Putnam. (Ed. brasileira: <em>O Erro de Descartes</em>.)
-        <br><br>
-        Damásio, A. R. (1999). <em>The Feeling of What Happens: Body and Emotion in the Making of Consciousness</em>. Harcourt. (Ed. brasileira: <em>O Sentimento de Si</em>.)
-        <br><br>
-        Damásio, A. R. (2003). <em>Looking for Spinoza: Joy, Sorrow, and the Feeling Brain</em>. Harcourt. (Ed. brasileira: <em>Em Busca de Espinosa</em>.)
-        <br><br>
-        Damásio, A. R. (2010). <em>Self Comes to Mind: Constructing the Conscious Brain</em>. Pantheon Books. (Ed. brasileira: <em>E o Cérebro Criou o Homem</em>.)
-      </div>
-
-      <p>Do lado clínico, a psicóloga Sarah Garfinkel e o psiquiatra Hugo Critchley propuseram, em 2015, um modelo hoje amplamente adotado: a interocepção não é uma habilidade única, mas três dimensões distintas, a acurácia (o quanto o corpo é lido corretamente), a sensibilidade (o quanto a pessoa acredita que o lê bem) e a consciência (o quanto essas duas coisas estão calibradas entre si). Um ano depois, aplicaram esse modelo a algo especialmente relevante para quem vive ansiedade ou dificuldade de regulação emocional: quando a acurácia é baixa e a sensibilidade é alta, a pessoa confia numa leitura do próprio corpo que na verdade não é precisa, e essa discrepância está associada a maiores níveis de ansiedade.</p>
-
-      <div class="fonte-bloco">
-        Garfinkel, S. N., Seth, A. K., Barrett, L. F., Suzuki, K., &amp; Critchley, H. D. (2015). Knowing your own heart: Distinguishing interoceptive accuracy, sensibility and awareness. <em>Biological Psychology</em>, 104, 65–74.
-        <br><br>
-        Garfinkel, S. N., Tiley, C., O'Keeffe, S., Harrison, N. A., Seth, A. K., &amp; Critchley, H. D. (2016). Discrepancies between dimensions of interoception in autism: implications for emotion and anxiety. <em>Biological Psychology</em>, 114, 117–126.
-      </div>
-
-      <p>Neste site, a interocepção é o campo que explica como a comunicação entre corpo e cérebro efetivamente funciona, e por que escutar o próprio corpo não é um dom raro: é uma habilidade que pode ser lida com mais ou menos precisão, e que pode ser desenvolvida com mais consciência ao longo do tempo.</p>
-
-      <!-- Fechamento e link cruzado -->
-      <div class="pesquisadores-strip">
-        <h3>O que esse mapa mostra</h3>
-        <p>Nenhum desses cinco campos foi criado isoladamente com a intenção de provar os outros. Cada um chegou, com suas próprias ferramentas e em seu próprio tempo, a uma versão da mesma constatação: o corpo não é neutro diante do que vivemos. Ele responde, se adapta e, quando não encontra saída, retém.</p>
-        <p>É essa convergência, e não a autoridade de um único nome, que sustenta a afirmação que abre este site.</p>
-        <a href="caminhos.html" class="btn btn-primary" style="margin-top: 20px; display: inline-block;">Existe caminho para mudar?</a>
-        <a href="o-corpo-que-guarda.html" class="btn btn-outline" style="margin-top: 20px; margin-left: 12px; display: inline-block;">Rever o mecanismo</a>
-      </div>
-
-    </article>
-
-    <div class="disclaimer" style="margin-top: 48px;">
-      Este conteúdo tem finalidade exclusivamente informativa e educacional. Não substitui acompanhamento psicoterápico, médico ou qualquer outro tipo de cuidado profissional.
-    </div>
-  </div>
-
 </main>
-
 <footer class="footer">
   <div class="container-lg">
     <div class="footer-inner">
       <div>
         <a href="index.html" class="footer-brand">Corpo<span>Vivo</span></a>
         <p class="footer-desc">O corpo registra, carrega e pode ajudar a liberar o que vivemos.</p>
-        <p class="footer-desc" style="margin-top:12px;">Contato: <a href="mailto:vera.rosendo@gmail.com">vera.rosendo@gmail.com</a></p>
       </div>
       <div class="footer-col">
         <h4>Conteúdo</h4>
@@ -403,36 +65,16 @@
         <h4>Mais</h4>
         <ul>
           <li><a href="blog/index.html">Blog</a></li>
-          <li><a href="esta-em-crise.html">Está em Crise?</a></li>
+          <li><a href="esta-em-crise.html">Contato</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p style="color: rgba(255,255,255,0.85);"><em>© 2026 Vera Rosendo.</em> Conteúdo educativo.</p>
-      <p style="margin-top:10px; color: rgba(255,255,255,0.55);">Produção, revisão e edição: Vera Rosendo · Pesquisa, redação e desenvolvimento técnico: Claude (IA).</p>
+      <p>Nenhuma informação aqui substitui acompanhamento profissional.</p>
+      <p style="margin-top:10px; opacity:0.5;">Produção e Design: Vera Rosendo · Desenvolvimento técnico: Claude (AI)</p>
     </div>
   </div>
 </footer>
-
 <script src="js/main.js"></script>
-<script>
-  // Mapa interativo: passar o mouse abre, sair fecha; toque alterna (mesmo padrão do smartcityes)
-  (function () {
-    var passos = document.querySelectorAll('#mapaCiclo .mapa-passo');
-    passos.forEach(function (passo) {
-      passo.addEventListener('mouseenter', function () { passo.classList.add('mapa-open'); });
-      passo.addEventListener('mouseleave', function () { passo.classList.remove('mapa-open'); });
-      passo.addEventListener('click', function (e) {
-        var estavaAberto = passo.classList.contains('mapa-open');
-        passos.forEach(function (p) { p.classList.remove('mapa-open'); });
-        if (!estavaAberto) passo.classList.add('mapa-open');
-        e.stopPropagation();
-      });
-    });
-    document.addEventListener('click', function () {
-      passos.forEach(function (p) { p.classList.remove('mapa-open'); });
-    });
-  })();
-</script>
 </body>
 </html>
