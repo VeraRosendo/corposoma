@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://meucorpovivo.vercel.app/sitemap.xml
+Sitemap: https://corposoma.vercel.app/sitemap.xml
