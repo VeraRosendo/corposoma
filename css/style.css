@@ -19,6 +19,10 @@ button { cursor: pointer; border: none; background: none; }
   --accent:    #c4973a;
   --sage:      #6b8c6e;
   --warm:      #9e5a3a;
+  /* tons de descanso (ilustrações) */
+  --nevoa:     #8fb3c4;
+  --argila:    #d9a08b;
+  --lilas:     #a99cc0;
   --border:    rgba(29, 58, 63, 0.12);
   --shadow:    0 2px 24px rgba(29, 58, 63, 0.08);
 
@@ -574,4 +578,43 @@ em { font-style: italic; }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 0.01ms; transition-duration: 0.01ms; }
+}
+
+/* ── ILUSTRAÇÕES ── */
+/* Faixa panorâmica abaixo do título das páginas internas */
+.page-hero.com-ilustracao { border-bottom: none; padding-bottom: var(--space-m); margin-bottom: 0; }
+
+.ilustracao {
+  margin: 0 auto var(--space-xl);
+}
+.ilustracao img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 12 / 5;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 2px;
+}
+
+/* Início: texto e ilustração lado a lado */
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: var(--space-l);
+  align-items: center;
+}
+.hero-ilustracao { margin: 0; }
+.hero-ilustracao img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 2px;
+}
+
+@media (max-width: 860px) {
+  .ilustracao img { aspect-ratio: 4 / 3; }
+  .hero-grid { grid-template-columns: 1fr; gap: var(--space-m); }
+  .hero-ilustracao img { aspect-ratio: 4 / 3; }
 }
