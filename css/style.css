@@ -613,8 +613,28 @@ em { font-style: italic; }
   border-radius: 2px;
 }
 
+/* Miniaturas no índice das Reflexões */
+.blog-card-img { display: block; margin-bottom: 18px; }
+.blog-card-img img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
 @media (max-width: 860px) {
   .ilustracao img { aspect-ratio: 4 / 3; }
   .hero-grid { grid-template-columns: 1fr; gap: var(--space-m); }
   .hero-ilustracao img { aspect-ratio: 4 / 3; }
 }
+
+/* ── AUTORIA NAS REFLEXÕES ── */
+.artigo-autoria {
+  font-size: 0.85rem;
+  color: var(--text-faint);
+  font-style: italic;
+  text-align: left;
+  margin-bottom: 16px;
+}
+.artigo-autoria a { color: var(--text-soft); }
