@@ -2,45 +2,96 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="icon" type="image/png" href="../favicon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Corpo Vivo | Seu corpo lembra de tudo que você tentou esquecer</title>
-  <meta name="description" content="A ciência de diferentes campos converge para um mesmo ponto: o corpo registra, carrega e pode ajudar a liberar o que vivemos. Neurociência, psicologia somática e memória corporal.">
+  <title>Reflexões | Corpo Vivo</title>
+  <meta name="description" content="Reflexões sobre corpo, emoção, neurociência e memória corporal, apoiadas por referência para quem quiser se aprofundar. Por que o corpo reage, o que a ciência encontrou e como é possível mudar.">
   <meta name="author" content="Vera Rosendo">
-  <link rel="canonical" href="https://meucorpovivo.vercel.app/">
+  <link rel="canonical" href="https://meucorpovivo.vercel.app/blog/index.html">
   <meta property="og:site_name" content="Corpo Vivo">
   <meta property="og:locale" content="pt_BR">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Seu corpo lembra de tudo que você tentou esquecer">
-  <meta property="og:description" content="A ciência de diferentes campos converge para um mesmo ponto: o corpo registra, carrega e pode ajudar a liberar o que vivemos. Neurociência, psicologia somática e memória corporal.">
-  <meta property="og:url" content="https://meucorpovivo.vercel.app/">
-  <meta property="og:image" content="https://meucorpovivo.vercel.app/img/og/inicio.jpg">
+  <meta property="og:title" content="Reflexões">
+  <meta property="og:description" content="Reflexões sobre corpo, emoção, neurociência e memória corporal, apoiadas por referência para quem quiser se aprofundar. Por que o corpo reage, o que a ciência encontrou e como é possível mudar.">
+  <meta property="og:url" content="https://meucorpovivo.vercel.app/blog/index.html">
+  <meta property="og:image" content="https://meucorpovivo.vercel.app/img/og/reflexao-04.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Ilustração de uma pessoa sentada formada por camadas coloridas">
+  <meta property="og:image:alt" content="Ilustração de uma pessoa sentada preenchida por curvas de nível coloridas">
   <meta name="twitter:card" content="summary_large_image">
-  <script type="application/ld+json">
-  {"@context": "https://schema.org", "@type": "WebSite", "name": "Corpo Vivo", "url": "https://meucorpovivo.vercel.app/", "inLanguage": "pt-BR", "description": "A ciência de diferentes campos converge para um mesmo ponto: o corpo registra, carrega e pode ajudar a liberar o que vivemos. Neurociência, psicologia somática e memória corporal.", "author": {"@type": "Person", "name": "Vera Rosendo", "url": "https://meucorpovivo.vercel.app/jornada.html"}}
-  </script>
-  <meta name="keywords" content="por que meu corpo trava com medo, ansiedade no diafragma, corpo guarda emoções, memória corporal, tensão muscular e emoção, psicologia somática, interocepção, trauma no corpo, liberar traumas pelo corpo, sistema nervoso e emoções, corpo vivo">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,900;1,400;1,600&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 32px;
+      margin-top: 48px;
+    }
+    .blog-card {
+      border-top: 2px solid var(--border);
+      padding: 28px 0 32px;
+      transition: border-color 0.2s;
+    }
+    .blog-card:hover { border-color: var(--accent); }
+    .blog-card-tag {
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      color: var(--sage);
+      font-style: italic;
+      margin-bottom: 10px;
+    }
+    .blog-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 10px;
+      line-height: 1.3;
+    }
+    .blog-card p {
+      font-size: 0.95rem;
+      color: var(--text-soft);
+      line-height: 1.75;
+      margin-bottom: 16px;
+      text-align: left;
+    }
+    .blog-card a.ler {
+      font-size: 0.88rem;
+      color: var(--sage);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .blog-card a.ler:hover { border-color: var(--sage); }
+    .badge-breve {
+      display: inline-block;
+      font-size: 0.72rem;
+      background: var(--bg-alt);
+      color: var(--text-faint);
+      padding: 2px 8px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      font-style: italic;
+      margin-left: 8px;
+    }
+  </style>
 </head>
 <body>
 
-<nav class="nav" role="navigation" aria-label="Navegação principal">
+<nav class="nav">
   <div class="nav-inner">
-    <a href="index.html" class="nav-brand">Corpo<span>Vivo</span></a>
+    <a href="../index.html" class="nav-brand">Corpo<span>Vivo</span></a>
     <ul class="nav-links">
-      <li><a href="index.html">Início</a></li>
-      <li><a href="o-corpo-que-guarda.html">O Corpo que Guarda</a></li>
-      <li><a href="a-ciencia.html">A Ciência</a></li>
-      <li><a href="caminhos.html">Caminhos</a></li>
-      <li><a href="jornada.html">Minha Jornada</a></li>
-      <li><a href="blog/index.html">Reflexões</a></li>
-      <li><a href="esta-em-crise.html">Está em Crise?</a></li>
+      <li><a href="../index.html">Início</a></li>
+      <li><a href="../o-corpo-que-guarda.html">O Corpo que Guarda</a></li>
+      <li><a href="../a-ciencia.html">A Ciência</a></li>
+      <li><a href="../caminhos.html">Caminhos</a></li>
+      <li><a href="../jornada.html">Minha Jornada</a></li>
+      <li><a href="index.html">Reflexões</a></li>
+      <li><a href="../esta-em-crise.html">Está em Crise?</a></li>
     </ul>
     <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -48,201 +99,91 @@
   </div>
 </nav>
 
-<ul class="nav-mobile" aria-label="Menu mobile">
-  <li><a href="index.html">Início</a></li>
-  <li><a href="o-corpo-que-guarda.html">O Corpo que Guarda</a></li>
-  <li><a href="a-ciencia.html">A Ciência</a></li>
-  <li><a href="caminhos.html">Caminhos</a></li>
-  <li><a href="jornada.html">Minha Jornada</a></li>
-  <li><a href="blog/index.html">Reflexões</a></li>
-  <li><a href="esta-em-crise.html">Está em Crise?</a></li>
+<ul class="nav-mobile">
+  <li><a href="../index.html">Início</a></li>
+  <li><a href="../o-corpo-que-guarda.html">O Corpo que Guarda</a></li>
+  <li><a href="../a-ciencia.html">A Ciência</a></li>
+  <li><a href="../caminhos.html">Caminhos</a></li>
+  <li><a href="../jornada.html">Minha Jornada</a></li>
+  <li><a href="index.html">Reflexões</a></li>
+  <li><a href="../esta-em-crise.html">Está em Crise?</a></li>
 </ul>
 
 <main>
-
-<!-- HERO -->
-<section class="hero">
-  <div class="container-lg hero-grid">
-    <div>
-    <p class="hero-eyebrow">Neurociência · Psicologia Somática · Corpo e Emoção</p>
-    <h1>Seu corpo lembra<br>de tudo que você<br>tentou esquecer.</h1>
-    <p class="hero-lead">
-      A ciência de diferentes campos converge para um mesmo ponto: o corpo não é suporte passivo das emoções. Ele as registra, as carrega e pode ajudar a liberá-las.
-    </p>
-    <div class="hero-actions">
-      <a href="o-corpo-que-guarda.html" class="btn btn-primary">Por que meu corpo reage assim?</a>
-      <a href="a-ciencia.html" class="btn btn-outline">O que a ciência encontrou</a>
-    </div>
-    </div>
-    <figure class="hero-ilustracao">
-      <img src="img/inicio.svg" width="1200" height="500" alt="Ilustração de uma pessoa sentada em repouso, com o braço apoiado no joelho, formada por camadas coloridas sobrepostas como sedimentos, das mais claras no alto às mais profundas na base.">
-    </figure>
+  <div class="page-hero container">
+    <p class="section-label">Reflexões</p>
+    <h1>Reflexões</h1>
+    <p class="lead">Considerações sobre corpo, emoção, neurociência e memória corporal, cada uma respaldada por referência para quem quiser se aprofundar. Para quem quer entender antes de sentir, ou sentiu antes de entender.</p>
   </div>
-</section>
 
-<!-- TRÊS PORTAS DE ENTRADA -->
-<section class="section section-alt">
-  <div class="container-lg">
-    <p class="section-label">Três perguntas. Três caminhos.</p>
-    <h2>Por onde você quer começar?</h2>
-    <div class="divider"></div>
+  <div class="container" style="padding-bottom: 80px;">
+    <div class="blog-grid">
 
-    <div class="content-grid">
-
-      <div class="content-card">
-        <svg class="content-card-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <ellipse cx="20" cy="12" rx="8" ry="9" stroke="currentColor" stroke-width="1.5"/>
-          <path d="M12 21 Q8 30 10 36" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-          <path d="M28 21 Q32 30 30 36" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-          <path d="M13 22 Q7 24 6 30" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-          <path d="M27 22 Q33 24 34 30" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-          <ellipse cx="20" cy="8" rx="12" ry="3" stroke="currentColor" stroke-width="0.8" stroke-dasharray="3 2" opacity="0.5"/>
-          <ellipse cx="20" cy="20" rx="12" ry="3" stroke="currentColor" stroke-width="0.8" stroke-dasharray="3 2" opacity="0.5"/>
-          <ellipse cx="20" cy="29" rx="12" ry="3" stroke="currentColor" stroke-width="0.8" stroke-dasharray="3 2" opacity="0.5"/>
-        </svg>
-        <h3>Por que meu corpo reage assim?</h3>
-        <p>Quando sentimos medo, dor ou ameaça, o corpo responde. Mas o que acontece quando essa resposta não se completa? Quando a tensão fica? Entenda o mecanismo.</p>
-        <a href="o-corpo-que-guarda.html" class="content-card-link">Entender o mecanismo</a>
+      <div class="blog-card">
+        <a href="artigo-01-por-que-o-corpo-trava.html" class="blog-card-img" tabindex="-1" aria-hidden="true"><img src="../img/reflexao-01.svg" width="1200" height="500" alt="" loading="lazy"></a>
+        <p class="blog-card-tag">Reflexão 01 · Sistema nervoso</p>
+        <h3>Por que meu corpo trava quando fico com medo?</h3>
+        <p>O coração acelera, a respiração muda, e às vezes o corpo simplesmente para. Não é fraqueza. É um mecanismo do sistema nervoso com nome, explicação e, o mais importante, saída.</p>
+        <a href="artigo-01-por-que-o-corpo-trava.html" class="ler">Ler artigo</a>
       </div>
 
-      <div class="content-card">
-        <svg class="content-card-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <circle cx="20" cy="20" r="12" stroke="currentColor" stroke-width="1.5"/>
-          <circle cx="20" cy="20" r="6" stroke="currentColor" stroke-width="1" stroke-dasharray="3 2"/>
-          <line x1="20" y1="8" x2="20" y2="4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-          <line x1="32" y1="20" x2="36" y2="20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-          <line x1="8" y1="20" x2="4" y2="20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-          <line x1="20" y1="32" x2="20" y2="36" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-          <circle cx="20" cy="20" r="2" fill="currentColor" opacity="0.6"/>
-        </svg>
-        <h3>O que a ciência encontrou?</h3>
-        <p>De Reich a Van der Kolk, de Porges a Van der Meer: décadas de pesquisa documentam o que muitas pessoas já sentiam sem conseguir nomear. O corpo guarda, e isso é biologia.</p>
-        <a href="a-ciencia.html" class="content-card-link">Ver as evidências</a>
+      <div class="blog-card">
+        <a href="artigo-02-audrey-van-der-meer.html" class="blog-card-img" tabindex="-1" aria-hidden="true"><img src="../img/reflexao-02.svg" width="1200" height="500" alt="" loading="lazy"></a>
+        <p class="blog-card-tag">Reflexão 02 · Neurociência</p>
+        <h3>O que Audrey van der Meer descobriu sobre movimento e cérebro</h3>
+        <p>A neurocientista norueguesa demonstrou com EEG de alta densidade que escrever à mão ativa redes neurais muito mais amplas que digitar. O que isso revela sobre o corpo vivo e conectado.</p>
+        <a href="artigo-02-audrey-van-der-meer.html" class="ler">Ler artigo</a>
       </div>
 
-      <div class="content-card">
-        <svg class="content-card-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path d="M20 6 C28 6 34 12 34 20 C34 28 28 34 20 34 C12 34 6 28 6 20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-          <path d="M6 20 C6 16 8 12 12 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-          <path d="M20 12 L20 20 L26 26" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-        <h3>Existe caminho para mudar?</h3>
-        <p>O mesmo corpo que retém pode aprender a liberar. Abordagens terapêuticas somáticas, respaldadas por pesquisa, trabalham exatamente nesse ponto.</p>
-        <a href="caminhos.html" class="content-card-link">Conhecer os caminhos</a>
+      <div class="blog-card">
+        <a href="artigo-03-diafragma-e-ansiedade.html" class="blog-card-img" tabindex="-1" aria-hidden="true"><img src="../img/reflexao-03.svg" width="1200" height="500" alt="" loading="lazy"></a>
+        <p class="blog-card-tag">Reflexão 03 · Respiração</p>
+        <h3>O diafragma e a ansiedade: o nó no meio do corpo</h3>
+        <p>Antes de qualquer pensamento sobre o que está errado, o corpo já mudou a forma de respirar. O diafragma é o primeiro a saber, e o último a ser escutado.</p>
+        <a href="artigo-03-diafragma-e-ansiedade.html" class="ler">Ler artigo</a>
+      </div>
+
+      <div class="blog-card">
+        <a href="artigo-04-bessel-van-der-kolk.html" class="blog-card-img" tabindex="-1" aria-hidden="true"><img src="../img/reflexao-04.svg" width="1200" height="500" alt="" loading="lazy"></a>
+        <p class="blog-card-tag">Reflexão 04 · Trauma e corpo</p>
+        <h3>Bessel van der Kolk: o corpo guarda as marcas</h3>
+        <p>Antes de ser um livro best-seller, foi uma imagem de ressonância magnética. Foi ali que a pesquisa de Van der Kolk começou a mudar o que sabemos sobre trauma, memória e corpo.</p>
+        <a href="artigo-04-bessel-van-der-kolk.html" class="ler">Ler artigo</a>
+      </div>
+
+      <div class="blog-card">
+        <a href="artigo-05-cortisol.html" class="blog-card-img" tabindex="-1" aria-hidden="true"><img src="../img/reflexao-05.svg" width="1200" height="500" alt="" loading="lazy"></a>
+        <p class="blog-card-tag">Reflexão 05 · Cortisol e estresse</p>
+        <h3>Cortisol: por que a incerteza é mais estressante que o perigo</h3>
+        <p>A ciência confirma o que muitos já sentiam: não é o risco em si que mais eleva o cortisol, é o não saber. Quatro pontos com embasamento científico e um protocolo que integra o que a pesquisa sustenta.</p>
+        <a href="artigo-05-cortisol.html" class="ler">Ler artigo</a>
       </div>
 
     </div>
   </div>
-</section>
-
-<!-- CITAÇÃO CENTRAL -->
-<section class="section quote-section">
-  <div class="container">
-    <blockquote class="quote-block">
-      <p>O corpo guarda as marcas.</p>
-      <footer class="quote-source">Bessel van der Kolk — <cite>O Corpo Guarda as Marcas</cite>, 2014</footer>
-    </blockquote>
-  </div>
-</section>
-
-<!-- O QUE A CIÊNCIA CONVERGE -->
-<section class="section section-alt">
-  <div class="container-lg">
-    <p class="section-label">Campos de pesquisa que convergem</p>
-    <h2>A mesma descoberta,<br>feita de formas diferentes.</h2>
-    <div class="divider"></div>
-
-    <div class="convergencia-grid">
-      <div>
-        <p>Pesquisadores de campos distintos, em décadas diferentes, chegaram ao mesmo lugar: o corpo não é neutro diante do que vivemos. Ele responde, se adapta e, quando não encontra saída, retém.</p>
-
-        <p style="margin-top: 20px;">Wilhelm Reich descreveu anéis de tensão muscular crônica nos anos 1930. Bessel van der Kolk mapeou o trauma no sistema nervoso com neuroimagem nos anos 1990. Stephen Porges explicou como o sistema nervoso autônomo regula as respostas emocionais. Peter Levine observou como animais completam respostas de estresse que humanos interrompem. Audrey van der Meer mostrou com EEG de alta densidade que o movimento forma o cérebro.</p>
-
-        <p style="margin-top: 20px;">Nenhum deles criou essa ideia sozinho. Eles a encontraram, cada um com suas ferramentas.</p>
-
-        <a href="a-ciencia.html" class="btn btn-outline" style="margin-top: 32px; display: inline-block;">Conhecer cada pesquisador</a>
-      </div>
-
-      <!-- SVG representando convergência de campos -->
-      <div class="convergencia-diagrama">
-        <svg viewBox="0 0 260 260" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <!-- Círculo central: corpo vivo -->
-          <circle cx="130" cy="130" r="42" fill="#6b8c6e" fill-opacity="0.16" stroke="#6b8c6e" stroke-width="1.5"/>
-          <text x="130" y="134" text-anchor="middle" font-family="Georgia,serif" font-size="11" font-weight="700" fill="#2c4a3e">corpo vivo</text>
-
-          <!-- Neurociência -->
-          <circle cx="76" cy="76" r="38" fill="#6b8c6e" fill-opacity="0.06" stroke="#6b8c6e" stroke-width="1.5" stroke-dasharray="4 3" stroke-opacity="0.85"/>
-          <text x="76" y="40" text-anchor="middle" font-family="Georgia,serif" font-size="10" font-weight="600" fill="#3f5c50">neurociência</text>
-
-          <!-- Psicologia somática -->
-          <circle cx="184" cy="76" r="38" fill="#9e5a3a" fill-opacity="0.06" stroke="#9e5a3a" stroke-width="1.5" stroke-dasharray="4 3" stroke-opacity="0.85"/>
-          <text x="184" y="38" text-anchor="middle" font-family="Georgia,serif" font-size="10" font-weight="600" fill="#9e5a3a">psicologia</text>
-          <text x="184" y="50" text-anchor="middle" font-family="Georgia,serif" font-size="10" font-weight="600" fill="#9e5a3a">somática</text>
-
-          <!-- Interocepção -->
-          <circle cx="130" cy="192" r="38" fill="#c4973a" fill-opacity="0.06" stroke="#c4973a" stroke-width="1.5" stroke-dasharray="4 3" stroke-opacity="0.85"/>
-          <text x="130" y="228" text-anchor="middle" font-family="Georgia,serif" font-size="10" font-weight="600" fill="#a87c2c">interocepção</text>
-
-          <!-- Linhas de convergência -->
-          <line x1="98" y1="98" x2="114" y2="114" stroke="#6b8c6e" stroke-width="1.2" opacity="0.6"/>
-          <line x1="162" y1="98" x2="146" y2="114" stroke="#9e5a3a" stroke-width="1.2" opacity="0.6"/>
-          <line x1="130" y1="166" x2="130" y2="148" stroke="#c4973a" stroke-width="1.2" opacity="0.6"/>
-
-          <!-- Ponto de convergência -->
-          <circle cx="130" cy="130" r="4" fill="#1d3a3f" opacity="0.7">
-            <animate attributeName="r" values="3;5;3" dur="3s" repeatCount="indefinite"/>
-            <animate attributeName="opacity" values="0.5;0.9;0.5" dur="3s" repeatCount="indefinite"/>
-          </circle>
-        </svg>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SEÇÃO VERA -->
-<section class="section section-vera">
-  <div class="container">
-    <p class="section-label">Quem escreve aqui</p>
-    <h2>Uma jornada em primeira pessoa.</h2>
-    <div class="divider"></div>
-    <p>Não cheguei a esse campo pelos livros. Cheguei pelo corpo, por um ponto de ruptura que me obrigou a procurar o que a mente já não conseguia resolver sozinha. Sou pós-graduada em Psicologia Corporal, estudiosa de psicanálise e de neurociência do desenvolvimento. Mas antes de qualquer formação, já sentia o que a ciência confirmaria depois: o corpo sabe de coisas que a mente ainda não nomeou.</p>
-    <p style="margin-top: 16px;">Este site é o que eu gostaria de ter encontrado quando estava procurando.</p>
-    <a href="jornada.html" class="btn btn-primary" style="margin-top: 32px;">Ler minha jornada</a>
-  </div>
-</section>
-
-<!-- DISCLAIMER -->
-<section style="padding: 40px 0;">
-  <div class="container">
-    <p class="disclaimer">
-      Este site tem finalidade exclusivamente informativa e educacional. O conteúdo aqui publicado não substitui acompanhamento psicoterápico, médico ou qualquer outro tipo de cuidado profissional. Se você está em sofrimento, busque apoio especializado.
-    </p>
-  </div>
-</section>
-
 </main>
 
 <footer class="footer">
   <div class="container-lg">
     <div class="footer-inner">
       <div>
-        <a href="index.html" class="footer-brand">Corpo<span>Vivo</span></a>
-        <p class="footer-desc">O corpo registra, carrega e pode ajudar a liberar o que vivemos. Neurociência, psicologia somática e memória corporal em linguagem acessível.</p>
+        <a href="../index.html" class="footer-brand">Corpo<span>Vivo</span></a>
+        <p class="footer-desc">O corpo registra, carrega e pode ajudar a liberar o que vivemos.</p>
       </div>
       <div class="footer-col">
         <h4>Conteúdo</h4>
         <ul>
-          <li><a href="o-corpo-que-guarda.html">O Corpo que Guarda</a></li>
-          <li><a href="a-ciencia.html">A Ciência</a></li>
-          <li><a href="caminhos.html">Caminhos</a></li>
-          <li><a href="jornada.html">Minha Jornada</a></li>
+          <li><a href="../o-corpo-que-guarda.html">O Corpo que Guarda</a></li>
+          <li><a href="../a-ciencia.html">A Ciência</a></li>
+          <li><a href="../caminhos.html">Caminhos</a></li>
+          <li><a href="../jornada.html">Minha Jornada</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Mais</h4>
         <ul>
-          <li><a href="blog/index.html">Reflexões</a></li>
-          <li><a href="esta-em-crise.html">Está em Crise?</a></li>
+          <li><a href="index.html">Reflexões</a></li>
+          <li><a href="../esta-em-crise.html">Está em Crise?</a></li>
         </ul>
       </div>
     </div>
@@ -253,6 +194,6 @@
   </div>
 </footer>
 
-<script src="js/main.js"></script>
+<script src="../js/main.js"></script>
 </body>
 </html>
