@@ -897,3 +897,41 @@ em { font-style: italic; }
   .nav-links a { font-size: 0.82rem; }
 }
 .nav-links > li { display: flex; align-items: center; }
+
+/* ── Cuidado informado: três termos ── */
+.ci-termos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 28px 0; }
+.ci-termo { background: var(--bg-alt); border-top: 3px solid var(--sage); padding: 20px 18px; }
+.ci-termo:nth-child(2) { border-top-color: var(--accent); }
+.ci-termo:nth-child(3) { border-top-color: var(--warm); }
+.ci-termo h4 { font-family: var(--font-display); font-size: 1rem; font-weight: 700; color: var(--text); margin-bottom: 8px; }
+.ci-termo p { font-size: 0.92rem; line-height: 1.65; margin: 0; text-align: left; }
+
+/* ── Posicionamento: régua em três faixas ── */
+.pg-regua { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 32px 0; }
+.pg-faixa { background: var(--bg-alt); border-top: 4px solid var(--sage); padding: 20px 18px; }
+.pg-faixa.pg-ambar { border-top-color: var(--accent); }
+.pg-faixa.pg-terra { border-top-color: var(--warm); }
+.pg-faixa h4 { font-family: var(--font-display); font-size: 1rem; font-weight: 700; color: var(--text); margin-bottom: 12px; }
+.pg-faixa p { font-size: 0.9rem; line-height: 1.6; margin: 0 0 10px; padding-left: 12px; border-left: 2px solid var(--border); text-align: left; }
+
+/* ── Destaque do posicionamento em A Ciência ── */
+.pos-destaque { background: var(--bg-vera); border-left: 4px solid var(--accent); padding: 26px 30px; margin: 36px 0; }
+.pos-destaque .pc-rotulo { margin-bottom: 8px; }
+.pos-destaque p { margin-bottom: 12px; }
+.pos-destaque a.btn { margin-top: 6px; }
+
+@media (max-width: 860px) {
+  .ci-termos, .pg-regua { grid-template-columns: 1fr; }
+  .pos-destaque { padding: 22px; }
+}
+
+/* ── Ressalva (nota de cautela dentro do texto) ── */
+.ressalva {
+  font-size: 0.9rem;
+  color: var(--text-soft);
+  font-style: italic;
+  border-left: 2px solid var(--accent);
+  padding-left: 16px;
+  margin: 20px 0;
+  max-width: 66ch;
+}
