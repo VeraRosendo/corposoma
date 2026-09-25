@@ -788,3 +788,30 @@ em { font-style: italic; }
   .pc-lado + .pc-lado { border-left: none; border-top: 1px solid var(--border); }
   .pc-destaque, .pc-final { padding: 24px; }
 }
+
+/* ── PÁGINA: WILHELM REICH (linha do tempo) ── */
+.rt-linha {
+  background: var(--bg-alt);
+  padding: 28px 32px;
+  margin: 36px 0;
+}
+.rt-item {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+  align-items: baseline;
+}
+.rt-item:last-child { border-bottom: none; }
+.rt-ano {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--warm);
+  font-size: 1rem;
+}
+.rt-item p { margin: 0; font-size: 0.95rem; }
+@media (max-width: 860px) {
+  .rt-linha { padding: 22px; }
+  .rt-item { grid-template-columns: 1fr; gap: 2px; }
+}
