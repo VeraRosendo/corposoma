@@ -54,3 +54,48 @@
   }
 
 })();
+
+/* ═══════════════════════════════════════
+   Submenus (Corpo, Ciência)
+   Computador: abre ao passar o mouse ou pela setinha
+   Celular: abre e fecha pela setinha
+   ═══════════════════════════════════════ */
+(function () {
+  'use strict';
+
+  var itens = document.querySelectorAll('.tem-sub');
+  if (!itens.length) return;
+
+  function fechar(exceto) {
+    itens.forEach(function (item) {
+      if (item === exceto) return;
+      item.classList.remove('aberto');
+      var b = item.querySelector('.sub-toggle');
+      if (b) b.setAttribute('aria-expanded', 'false');
+    });
+  }
+
+  itens.forEach(function (item) {
+    var botao = item.querySelector('.sub-toggle');
+    if (!botao) return;
+    botao.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var abrir = !item.classList.contains('aberto');
+      fechar(item);
+      item.classList.toggle('aberto', abrir);
+      botao.setAttribute('aria-expanded', abrir ? 'true' : 'false');
+    });
+    // destaca o item principal quando a página atual está no submenu
+    if (item.querySelector('.submenu a.active')) {
+      var principal = item.querySelector(':scope > a');
+      if (principal) principal.classList.add('active-pai');
+    }
+  });
+
+  document.addEventListener('click', function (e) {
+    if (!e.target.closest('.tem-sub')) fechar(null);
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') fechar(null);
+  });
+})();
