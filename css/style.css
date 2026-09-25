@@ -935,3 +935,13 @@ em { font-style: italic; }
   margin: 20px 0;
   max-width: 66ch;
 }
+
+/* ── Ajuste do menu: sem quebra de linha e com respiro após a marca ── */
+.nav-inner { max-width: 1200px; }
+.nav-brand { flex-shrink: 0; margin-right: 40px; }
+.nav-links { gap: 24px; }
+.nav-links a { white-space: nowrap; font-size: 0.85rem; }
+@media (max-width: 1140px) {
+  .nav-links { display: none; }
+  .nav-toggle { display: flex; }
+}
