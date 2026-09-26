@@ -990,3 +990,17 @@ em { font-style: italic; }
 }
 .lt-epocas + h3 { margin-top: 40px !important; }
 .pc-body h3[id] { scroll-margin-top: 90px; }
+
+/* ── Sínteses novas (sem estilos embutidos) ── */
+.st-abertura {
+  font-family: var(--font-display);
+  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+  font-style: italic;
+  line-height: 1.55;
+  margin-bottom: 36px;
+  text-align: left;
+}
+.st-nav { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; margin-top: 56px; padding-top: 28px; border-top: 1px solid var(--border); }
+.st-nav a { font-size: 0.9rem; color: var(--sage); }
+.pc-final p strong { color: var(--warm); }
+.st-abertura + h3 { margin-top: 24px !important; }
