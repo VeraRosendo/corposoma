@@ -945,3 +945,6 @@ em { font-style: italic; }
   .nav-links { display: none; }
   .nav-toggle { display: flex; }
 }
+
+/* Rótulo que precisa preservar minúsculas (ex.: "Os três Es") */
+.pc-rotulo.pc-rotulo-misto { text-transform: none; font-size: 0.9rem; letter-spacing: 0.06em; }
