@@ -1004,3 +1004,13 @@ em { font-style: italic; }
 .st-nav a { font-size: 0.9rem; color: var(--sage); }
 .pc-final p strong { color: var(--warm); }
 .st-abertura + h3 { margin-top: 24px !important; }
+
+/* ── Índice das Sínteses: menu de temas ── */
+.sint-temas { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+.sint-temas a {
+  font-size: 0.8rem; text-decoration: none; color: var(--text);
+  background: var(--bg-alt); border: 1px solid var(--border);
+  border-left: 3px solid var(--accent); padding: 6px 12px; border-radius: 2px;
+}
+.sint-temas a:hover { color: var(--accent); }
+.blog-card[id] { scroll-margin-top: 90px; }
