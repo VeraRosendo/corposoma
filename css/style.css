@@ -948,3 +948,45 @@ em { font-style: italic; }
 
 /* Rótulo que precisa preservar minúsculas (ex.: "Os três Es") */
 .pc-rotulo.pc-rotulo-misto { text-transform: none; font-size: 0.9rem; letter-spacing: 0.06em; }
+
+/* ── LINHA DO TEMPO ── */
+.lt-epocas { display: flex; flex-wrap: wrap; gap: 8px; margin: 28px 0 8px; }
+.lt-chip {
+  font-size: 0.8rem; text-decoration: none; color: var(--text);
+  background: var(--bg-alt); border: 1px solid var(--border);
+  border-left: 3px solid var(--sage); padding: 6px 12px; border-radius: 2px;
+}
+.lt-chip:hover { color: var(--accent); }
+.lt-lista { position: relative; margin: 24px 0 8px; padding-left: 0; }
+.lt-lista::before {
+  content: ""; position: absolute; left: 44px; top: 6px; bottom: 6px;
+  width: 2px; background: var(--border);
+}
+.lt-item { display: grid; grid-template-columns: 90px 1fr; gap: 18px; padding: 14px 0; position: relative; }
+.lt-ano {
+  font-family: var(--font-display); font-weight: 700; font-size: 1rem;
+  color: #fff; background: var(--sage); border-radius: 20px;
+  text-align: center; padding: 3px 0; height: fit-content; position: relative; z-index: 1;
+}
+.lt-conteudo h4 { font-family: var(--font-display); font-size: 1.08rem; font-weight: 700; color: var(--text); margin-bottom: 2px; }
+.lt-autor { font-size: 0.86rem; font-style: italic; color: var(--warm); margin-bottom: 8px !important; text-align: left; }
+.lt-conteudo p { margin-bottom: 10px; }
+.lt-ref {
+  font-size: 0.82rem; font-style: italic; color: var(--text-soft);
+  background: var(--bg-alt); border-left: 2px solid var(--border);
+  padding: 10px 14px; line-height: 1.6;
+}
+/* uma cor por época */
+.lt-c0 .lt-ano, .lt-chip.lt-c0 { background: var(--lilas); } .lt-chip.lt-c0 { background: var(--bg-alt); border-left-color: var(--lilas); }
+.lt-c1 .lt-ano { background: var(--warm); } .lt-chip.lt-c1 { border-left-color: var(--warm); }
+.lt-c2 .lt-ano { background: var(--accent); } .lt-chip.lt-c2 { border-left-color: var(--accent); }
+.lt-c3 .lt-ano { background: var(--sage); } .lt-chip.lt-c3 { border-left-color: var(--sage); }
+.lt-c4 .lt-ano { background: var(--nevoa); } .lt-chip.lt-c4 { border-left-color: var(--nevoa); }
+.lt-c5 .lt-ano { background: var(--argila); } .lt-chip.lt-c5 { border-left-color: var(--argila); }
+@media (max-width: 560px) {
+  .lt-lista::before { display: none; }
+  .lt-item { grid-template-columns: 1fr; gap: 6px; }
+  .lt-ano { width: 90px; }
+}
+.lt-epocas + h3 { margin-top: 40px !important; }
+.pc-body h3[id] { scroll-margin-top: 90px; }
